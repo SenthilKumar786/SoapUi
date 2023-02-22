@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="809f1f7d-ce26-4379-896b-2b305acbad6f" activeEnvironment="Default" name="NEW Sale Order" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="e6fd3435-344f-42ba-87e1-48a24736f547" wsaVersion="NONE" name="ZFM_CUSTSALEORD_SEN_soap12" type="wsdl" bindingName="{urn:sap-com:document:sap:rfc:functions}ZFM_CUSTSALEORD_SEN_soap12" soapVersion="1_2" anonymous="optional" definition="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_custsaleord_sen/100/zfm_custsaleord_sen/zfm_custsaleord_sen?sap-client=100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://KTINDHNA02.kaartech.com:8001/sap/bc/srt/rfc/sap/zfm_custsaleord_sen/100/zfm_custsaleord_sen/zfm_custsaleord_sen</con:endpoint></con:endpoints><con:operation id="0ee92a0c-7c84-411a-b2a6-d11a8c59eda7" isOneWay="false" action="urn:sap-com:document:sap:rfc:functions:ZFM_CUSTSALEORD_SEN:ZFM_CUSTSALEORD_SENRequest" name="ZFM_CUSTSALEORD_SEN" bindingOperationName="ZFM_CUSTSALEORD_SEN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="172d9a05-7543-4059-a1bf-8fb69714a854" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://KTINDHNA02.kaartech.com:8001/sap/bc/srt/rfc/sap/zfm_custsaleord_sen/100/zfm_custsaleord_sen/zfm_custsaleord_sen</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <urn:ZFM_CUSTSALEORD_SEN>\r
+        
+         
+         <MATNR>12</MATNR>\r
+        
+         <ZCUSID>1</ZCUSID>\r
+      </urn:ZFM_CUSTSALEORD_SEN>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:sap-com:document:sap:rfc:functions/ZFM_CUSTSALEORD_SEN/ZFM_CUSTSALEORD_SENRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="5f4e37b0-ecf3-422c-bdd8-4fe00b8f83eb" wsaVersion="NONE" name="ZFM_CUSTSALEORD_SEN" type="wsdl" bindingName="{urn:sap-com:document:sap:rfc:functions}ZFM_CUSTSALEORD_SEN" soapVersion="1_1" anonymous="optional" definition="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_custsaleord_sen/100/zfm_custsaleord_sen/zfm_custsaleord_sen?sap-client=100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_custsaleord_sen/100/zfm_custsaleord_sen/zfm_custsaleord_sen?sap-client=100"><con:part><con:url>http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_custsaleord_sen/100/zfm_custsaleord_sen/zfm_custsaleord_sen?sap-client=100</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:sap-com:document:sap:rfc:functions" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <wsdl:documentation>
+    <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl"/>
+  </wsdl:documentation>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="BN__ZFM_CUSTSALEORD_SEN">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization wsp:Optional="true" xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" wsp:Optional="true" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BN__ZFM_CUSTSALEORD_SEN_soap12">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization wsp:Optional="true" xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" wsp:Optional="true" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="IF__ZFM_CUSTSALEORD_SEN">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+          <sapsession:enableSession>false</sapsession:enableSession>
+        </sapsession:Session>
+        <sapcentraladmin:CentralAdministration wsp:Optional="true" xmlns:sapcentraladmin="http://www.sap.com/webas/700/soap/features/CentralAdministration/">
+          <sapcentraladmin:BusinessApplicationID>FD51D02D79A11EED92D8367980F05415</sapcentraladmin:BusinessApplicationID>
+        </sapcentraladmin:CentralAdministration>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZFM_CUSTSALEORD_SEN">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <xsd:simpleType name="char1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char16">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="16"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char18">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="18"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char2">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char20">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="20"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char220">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="220"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char32">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="32"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char35">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="35"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char4">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char40">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="40"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char5">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="5"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char50">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="50"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="cuky5">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="5"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="curr11.2">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="11"/>
+          <xsd:fractionDigits value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="curr15.2">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="15"/>
+          <xsd:fractionDigits value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="date10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10"/>
+          <xsd:pattern value="\d\d\d\d-\d\d-\d\d"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal5.0">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="5"/>
+          <xsd:fractionDigits value="0"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal9.5">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="9"/>
+          <xsd:fractionDigits value="5"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric6">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="6"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="quantum13.3">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="13"/>
+          <xsd:fractionDigits value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="quantum15.3">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="15"/>
+          <xsd:fractionDigits value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="time">
+        <xsd:restriction base="xsd:time">
+          <xsd:pattern value="[0-9]{2}:[0-9]{2}:[0-9]{2}"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="unit3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="BAPIMGVMATNR">
+        <xsd:sequence>
+          <xsd:element name="MATERIAL_EXT" type="tns:char40"/>
+          <xsd:element name="MATERIAL_VERS" type="tns:char10"/>
+          <xsd:element name="MATERIAL_GUID" type="tns:char32"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BAPIRETURN">
+        <xsd:sequence>
+          <xsd:element name="TYPE" type="tns:char1"/>
+          <xsd:element name="CODE" type="tns:char5"/>
+          <xsd:element name="MESSAGE" type="tns:char220"/>
+          <xsd:element name="LOG_NO" type="tns:char20"/>
+          <xsd:element name="LOG_MSG_NO" type="tns:numeric6"/>
+          <xsd:element name="MESSAGE_V1" type="tns:char50"/>
+          <xsd:element name="MESSAGE_V2" type="tns:char50"/>
+          <xsd:element name="MESSAGE_V3" type="tns:char50"/>
+          <xsd:element name="MESSAGE_V4" type="tns:char50"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BAPIORDERS">
+        <xsd:sequence>
+          <xsd:element name="SD_DOC" type="tns:char10"/>
+          <xsd:element name="ITM_NUMBER" type="tns:numeric6"/>
+          <xsd:element name="MATERIAL" type="tns:char18"/>
+          <xsd:element name="SHORT_TEXT" type="tns:char40"/>
+          <xsd:element name="DOC_TYPE" type="tns:char4"/>
+          <xsd:element name="DOC_DATE" type="tns:date10"/>
+          <xsd:element name="REQ_QTY" type="tns:quantum15.3"/>
+          <xsd:element name="REQ_DATE" type="tns:date10"/>
+          <xsd:element name="PURCH_NO" type="tns:char20"/>
+          <xsd:element name="BATCH" type="tns:char10"/>
+          <xsd:element name="VALID_FROM" type="tns:date10"/>
+          <xsd:element name="VALID_TO" type="tns:date10"/>
+          <xsd:element name="BILL_BLOCK" type="tns:char2"/>
+          <xsd:element name="DLV_BLOCK" type="tns:char2"/>
+          <xsd:element name="SOLD_TO" type="tns:char10"/>
+          <xsd:element name="NAME" type="tns:char35"/>
+          <xsd:element name="EXCHG_RATE" type="tns:decimal9.5"/>
+          <xsd:element name="DLV_QTY" type="tns:quantum13.3"/>
+          <xsd:element name="BASE_UOM" type="tns:unit3"/>
+          <xsd:element name="NET_PRICE" type="tns:curr11.2"/>
+          <xsd:element name="COND_P_UNT" type="tns:decimal5.0"/>
+          <xsd:element name="COND_UNIT" type="tns:unit3"/>
+          <xsd:element name="NET_VAL_HD" type="tns:curr15.2"/>
+          <xsd:element name="NET_VALUE" type="tns:curr15.2"/>
+          <xsd:element name="DIVISION" type="tns:char2"/>
+          <xsd:element name="DOC_STATUS" type="tns:char20"/>
+          <xsd:element name="SALES_GRP" type="tns:char3"/>
+          <xsd:element name="SALES_OFF" type="tns:char4"/>
+          <xsd:element name="SALES_ORG" type="tns:char4"/>
+          <xsd:element name="SALES_UNIT" type="tns:unit3"/>
+          <xsd:element name="SHIP_POINT" type="tns:char4"/>
+          <xsd:element name="DISTR_CHAN" type="tns:char2"/>
+          <xsd:element name="GI_DATE" type="tns:date10"/>
+          <xsd:element name="CURRENCY" type="tns:cuky5"/>
+          <xsd:element name="PLANT" type="tns:char4"/>
+          <xsd:element name="STORE_LOC" type="tns:char4"/>
+          <xsd:element name="ORD_REASON" type="tns:char3"/>
+          <xsd:element name="REASON_REJ" type="tns:char2"/>
+          <xsd:element name="B_UOM_ISO" type="tns:char3"/>
+          <xsd:element name="CD_UNT_ISO" type="tns:char3"/>
+          <xsd:element name="S_UNIT_ISO" type="tns:char3"/>
+          <xsd:element name="CURR_ISO" type="tns:char3"/>
+          <xsd:element name="PURCH_NO_C" type="tns:char35"/>
+          <xsd:element name="EXCHG_RATE_V" type="tns:decimal9.5"/>
+          <xsd:element name="MAT_EXT" type="tns:char40"/>
+          <xsd:element name="MAT_GUID" type="tns:char32"/>
+          <xsd:element name="MAT_VERS" type="tns:char10"/>
+          <xsd:element name="CREATION_DATE" type="tns:date10"/>
+          <xsd:element name="CREATION_TIME" type="tns:time"/>
+          <xsd:element name="STATUS_DOC" type="tns:char1"/>
+          <xsd:element name="REQ_SEGMENT" type="tns:char16"/>
+          <xsd:element name="MATERIAL_LONG" type="tns:char40"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZSEN_SALESDETAIL_T">
+        <xsd:sequence>
+          <xsd:element name="item" type="tns:BAPIORDERS" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ZFM_CUSTSALEORD_SEN">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="DOCDATEFROM" type="tns:date10" minOccurs="0"/>
+            <xsd:element name="DOCDATETO" type="tns:date10" minOccurs="0"/>
+            <xsd:element name="EXMATNR" type="tns:BAPIMGVMATNR" minOccurs="0"/>
+            <xsd:element name="MATNR" type="tns:char18" minOccurs="0"/>
+            <xsd:element name="PURORDER" type="tns:char20" minOccurs="0"/>
+            <xsd:element name="PURORDERNUM" type="tns:char35" minOccurs="0"/>
+            <xsd:element name="SALESORG" type="tns:char4"/>
+            <xsd:element name="ZCUSID" type="tns:char10"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZFM_CUSTSALEORD_SENResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="RESULT" type="tns:BAPIRETURN"/>
+            <xsd:element name="SORDERDATA" type="tns:ZSEN_SALESDETAIL_T"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ZFM_CUSTSALEORD_SEN">
+    <wsdl:part name="parameters" element="tns:ZFM_CUSTSALEORD_SEN"/>
+  </wsdl:message>
+  <wsdl:message name="ZFM_CUSTSALEORD_SENResponse">
+    <wsdl:part name="parameter" element="tns:ZFM_CUSTSALEORD_SENResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ZFM_CUSTSALEORD_SEN">
+    <wsdl:documentation>
+      <sapdoc:sapdoc xmlns:sapdoc="urn:sap:esi:documentation">
+        <sapdoc:docitem docURL="http://KTINDHNA02.kaartech.com:8000/sap/bc/esdt/docu/sd_text?sap-client=100&amp;sd_name=ZFM_CUSTSALEORD_SEN"/>
+      </sapdoc:sapdoc>
+    </wsdl:documentation>
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#IF__ZFM_CUSTSALEORD_SEN"/>
+    </wsp:Policy>
+    <wsdl:operation name="ZFM_CUSTSALEORD_SEN">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZFM_CUSTSALEORD_SEN"/>
+      </wsp:Policy>
+      <wsdl:input message="tns:ZFM_CUSTSALEORD_SEN"/>
+      <wsdl:output message="tns:ZFM_CUSTSALEORD_SENResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ZFM_CUSTSALEORD_SEN" type="tns:ZFM_CUSTSALEORD_SEN">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__ZFM_CUSTSALEORD_SEN"/>
+    </wsp:Policy>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ZFM_CUSTSALEORD_SEN">
+      <soap:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZFM_CUSTSALEORD_SEN:ZFM_CUSTSALEORD_SENRequest" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZFM_CUSTSALEORD_SEN_soap12" type="tns:ZFM_CUSTSALEORD_SEN">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__ZFM_CUSTSALEORD_SEN_soap12"/>
+    </wsp:Policy>
+    <wsoap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ZFM_CUSTSALEORD_SEN">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZFM_CUSTSALEORD_SEN:ZFM_CUSTSALEORD_SENRequest" style="document"/>
+      <wsdl:input>
+        <wsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZFM_CUSTSALEORD_SEN">
+    <wsdl:port name="ZFM_CUSTSALEORD_SEN" binding="tns:ZFM_CUSTSALEORD_SEN">
+      <soap:address location="https://KTINDHNA02.kaartech.com:8001/sap/bc/srt/rfc/sap/zfm_custsaleord_sen/100/zfm_custsaleord_sen/zfm_custsaleord_sen"/>
+    </wsdl:port>
+    <wsdl:port name="ZFM_CUSTSALEORD_SEN_soap12" binding="tns:ZFM_CUSTSALEORD_SEN_soap12">
+      <wsoap12:address location="https://KTINDHNA02.kaartech.com:8001/sap/bc/srt/rfc/sap/zfm_custsaleord_sen/100/zfm_custsaleord_sen/zfm_custsaleord_sen"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://KTINDHNA02.kaartech.com:8001/sap/bc/srt/rfc/sap/zfm_custsaleord_sen/100/zfm_custsaleord_sen/zfm_custsaleord_sen</con:endpoint></con:endpoints><con:operation id="467571f0-8aeb-450a-a166-e398046c5485" isOneWay="false" action="urn:sap-com:document:sap:rfc:functions:ZFM_CUSTSALEORD_SEN:ZFM_CUSTSALEORD_SENRequest" name="ZFM_CUSTSALEORD_SEN" bindingOperationName="ZFM_CUSTSALEORD_SEN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f2ebdd29-42f7-4860-89e1-6e6791f4b854" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://KTINDHNA02.kaartech.com:8001/sap/bc/srt/rfc/sap/zfm_custsaleord_sen/100/zfm_custsaleord_sen/zfm_custsaleord_sen</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:ZFM_CUSTSALEORD_SEN>\r
+         <!--Optional:-->\r
+         <DOCDATEFROM>?</DOCDATEFROM>\r
+         <!--Optional:-->\r
+         <DOCDATETO>?</DOCDATETO>\r
+         <!--Optional:-->\r
+         <EXMATNR>\r
+            <MATERIAL_EXT>?</MATERIAL_EXT>\r
+            <MATERIAL_VERS>?</MATERIAL_VERS>\r
+            <MATERIAL_GUID>?</MATERIAL_GUID>\r
+         </EXMATNR>\r
+         <!--Optional:-->\r
+         <MATNR>?</MATNR>\r
+         <!--Optional:-->\r
+         <PURORDER>?</PURORDER>\r
+         <!--Optional:-->\r
+         <PURORDERNUM>?</PURORDERNUM>\r
+         <SALESORG>?</SALESORG>\r
+         <ZCUSID>?</ZCUSID>\r
+      </urn:ZFM_CUSTSALEORD_SEN>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:sap-com:document:sap:rfc:functions:ZFM_CUSTSALEORD_SEN:ZFM_CUSTSALEORD_SENRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

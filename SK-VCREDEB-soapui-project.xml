@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="11f10cab-7394-4847-b10a-218b648a0362" activeEnvironment="Default" name="SK_VCREDEB" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="41acd01f-f733-462e-92ac-d3bbcd152b1b" wsaVersion="NONE" name="SI_DK_VCREDEBBinding" type="wsdl" bindingName="{http://Employee_sk_Sen_786.com}SI_DK_VCREDEBBinding" soapVersion="1_1" anonymous="optional" definition="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/50993763ab123f53b5bbf4cf40f25121" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/50993763ab123f53b5bbf4cf40f25121"><con:part><con:url>http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/50993763ab123f53b5bbf4cf40f25121</con:url><con:content><![CDATA[<wsdl:definitions name="SI_DK_VCREDEB" targetNamespace="http://Employee_sk_Sen_786.com" xmlns:rfc="urn:sap-com:document:sap:rfc:functions" xmlns:p1="http://Employee_sk_Sen_786.com" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation/>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="OP_SI_DK_VCREDEB"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:sap-com:document:sap:rfc:functions">
+      <xsd:element name="ZFM_VEN_CREDEB.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="T_CRE">
+              <xsd:annotation>
+                <xsd:documentation>CREDIT DEBIT STRUCTURE</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="ZVENDOR_CREDITDEBITMEMO_S" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="T_DEB">
+              <xsd:annotation>
+                <xsd:documentation>CREDIT DEBIT STRUCTURE</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="ZVENDOR_CREDITDEBITMEMO_S" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZFM_VEN_CREDEB">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="VENDOR_ID">
+              <xsd:annotation>
+                <xsd:documentation>Account Number of Vendor or Creditor</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="T_CRE">
+              <xsd:annotation>
+                <xsd:documentation>CREDIT DEBIT STRUCTURE</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="ZVENDOR_CREDITDEBITMEMO_S" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="T_DEB">
+              <xsd:annotation>
+                <xsd:documentation>CREDIT DEBIT STRUCTURE</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="ZVENDOR_CREDITDEBITMEMO_S" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="date">
+        <xsd:union memberTypes="xsd:date genericDate"/>
+      </xsd:simpleType>
+      <xsd:simpleType name="genericDate">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="....-..-.."/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="ZVENDOR_CREDITDEBITMEMO_S">
+        <xsd:annotation>
+          <xsd:documentation>CREDIT DEBIT STRUCTURE</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="VENDOR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Account Number of Vendor or Creditor</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="MATNR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Material Number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="18"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="WERKS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Plant</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="MENGE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Quantity</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="MEINS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Base Unit of Measure</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BUKRS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Company Code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BELNR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Accounting Document Number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="GJAHR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Fiscal Year</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+                <xsd:pattern value="\d+"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BUZEI" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Number of Line Item Within Accounting Document</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3"/>
+                <xsd:pattern value="\d+"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="AUGDT" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Clearing Date</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="KOART" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Account type</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="DMBTR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Amount in local currency</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BDIFF" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Valuation Difference</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="XBILK" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicator: Account is a balance sheet account?</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="rfc.ZFM_VEN_CREDEB.Input">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_VEN_CREDEB"/>
+  </wsdl:message>
+  <wsdl:message name="rfc.ZFM_VEN_CREDEB.Output">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_VEN_CREDEB.Response"/>
+  </wsdl:message>
+  <wsdl:portType name="SI_DK_VCREDEB">
+    <wsdl:documentation/>
+    <wsdl:operation name="SI_DK_VCREDEB">
+      <wsdl:documentation/>
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_DK_VCREDEB"/>
+      </wsp:Policy>
+      <wsdl:input message="p1:rfc.ZFM_VEN_CREDEB.Input"/>
+      <wsdl:output message="p1:rfc.ZFM_VEN_CREDEB.Output"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_DK_VCREDEBBinding" type="p1:SI_DK_VCREDEB">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <wsdl:operation name="SI_DK_VCREDEB">
+      <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_DK_VCREDEBService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_DK_VCREDEBBinding">
+      <soap:address location="http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_00_SK_CREDEB&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_VCREDEB&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_DK_VCREDEBBinding">
+      <soap:address location="https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_00_SK_CREDEB&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_VCREDEB&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_00_SK_CREDEB&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_VCREDEB&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:endpoint>https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_00_SK_CREDEB&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_VCREDEB&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint></con:endpoints><con:operation id="99ce453c-e621-40ce-9f30-d7659654a7c5" isOneWay="false" action="http://sap.com/xi/WebService/soap1.1" name="SI_DK_VCREDEB" bindingOperationName="SI_DK_VCREDEB" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a92a9e20-318e-423f-987f-00644b736e66" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_00_SK_CREDEB&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_VCREDEB&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:ZFM_VEN_CREDEB>\r
+         <!--You may enter the following 3 items in any order-->\r
+         <VENDOR_ID>MOHANRAJ</VENDOR_ID>\r
+         <T_CRE>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+              
+               
+            </item>\r
+         </T_CRE>\r
+         <T_DEB>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+             \r
+               
+            </item>\r
+         </T_DEB>\r
+      </urn:ZFM_VEN_CREDEB>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>pouser@2</con:username><con:password>Tech@2022</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sap.com/xi/WebService/soap1.1"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

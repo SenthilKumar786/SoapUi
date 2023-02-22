@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="54a8ae9c-28fb-4aa8-a109-0905931e4220" activeEnvironment="Default" name="VENDOR LOGIN" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="da9000d1-33ef-496c-8ce7-a42424635aff" wsaVersion="NONE" name="SI_SEN_VENDLOGINBinding" type="wsdl" bindingName="{http://Vendor_skSen_786.com}SI_SEN_VENDLOGINBinding" soapVersion="1_1" anonymous="optional" definition="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/7fab52e7a27b36bb91c3167b48ce8888" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/7fab52e7a27b36bb91c3167b48ce8888"><con:part><con:url>http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/7fab52e7a27b36bb91c3167b48ce8888</con:url><con:content><![CDATA[<wsdl:definitions name="SI_SEN_VENDLOGIN" targetNamespace="http://Vendor_skSen_786.com" xmlns:rfc="urn:sap-com:document:sap:rfc:functions" xmlns:p1="http://Vendor_skSen_786.com" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation/>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="OP_SI_SEN_VENDLOGIN"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:sap-com:document:sap:rfc:functions">
+      <xsd:element name="ZFM_VENDLOGIN_SEN.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="NAME" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>Name</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="RESULT" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>Char 20</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="20"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZFM_VENDLOGIN_SEN">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="ZPSWORD">
+              <xsd:annotation>
+                <xsd:documentation>PASSWORD DATA ELEMENT</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ZUSERID">
+              <xsd:annotation>
+                <xsd:documentation>Account Number of Vendor or Creditor</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="rfc.ZFM_VENDLOGIN_SEN.Input">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_VENDLOGIN_SEN"/>
+  </wsdl:message>
+  <wsdl:message name="rfc.ZFM_VENDLOGIN_SEN.Output">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_VENDLOGIN_SEN.Response"/>
+  </wsdl:message>
+  <wsdl:portType name="SI_SEN_VENDLOGIN">
+    <wsdl:documentation/>
+    <wsdl:operation name="SI_SEN_VENDLOGIN">
+      <wsdl:documentation/>
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_SEN_VENDLOGIN"/>
+      </wsp:Policy>
+      <wsdl:input message="p1:rfc.ZFM_VENDLOGIN_SEN.Input"/>
+      <wsdl:output message="p1:rfc.ZFM_VENDLOGIN_SEN.Output"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_SEN_VENDLOGINBinding" type="p1:SI_SEN_VENDLOGIN">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <wsdl:operation name="SI_SEN_VENDLOGIN">
+      <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_SEN_VENDLOGINService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_SEN_VENDLOGINBinding">
+      <soap:address location="http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_VENDLOGIN&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_VENDLOGIN&amp;interfaceNamespace=http%3A%2F%2FVendor_skSen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_SEN_VENDLOGINBinding">
+      <soap:address location="https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_VENDLOGIN&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_VENDLOGIN&amp;interfaceNamespace=http%3A%2F%2FVendor_skSen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_VENDLOGIN&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_VENDLOGIN&amp;interfaceNamespace=http://Vendor_skSen_786.com</con:endpoint><con:endpoint>https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_VENDLOGIN&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_VENDLOGIN&amp;interfaceNamespace=http://Vendor_skSen_786.com</con:endpoint></con:endpoints><con:operation id="0c66e0e9-35a6-495a-8ee9-7f3e6bad6dfb" isOneWay="false" action="http://sap.com/xi/WebService/soap1.1" name="SI_SEN_VENDLOGIN" bindingOperationName="SI_SEN_VENDLOGIN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="519e7db3-e54a-4237-a55d-0e61964fd1c9" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_VENDLOGIN&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_VENDLOGIN&amp;interfaceNamespace=http://Vendor_skSen_786.com</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:ZFM_VENDLOGIN_SEN>\r
+         <!--You may enter the following 2 items in any order-->\r
+         <ZPSWORD>7860</ZPSWORD>\r
+         <ZUSERID>12</ZUSERID>\r
+      </urn:ZFM_VENDLOGIN_SEN>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>pouser@2</con:username><con:password>Tech@2022</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sap.com/xi/WebService/soap1.1"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

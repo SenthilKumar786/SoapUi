@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="63e6e740-73fd-4f6b-a03a-199f2a63fd0f" activeEnvironment="Default" name="SK_C_INQUIRY" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c360e84f-a999-469e-9b3b-62e431b984fd" wsaVersion="NONE" name="ZFM_CP_INQUIRY_DK_soap12" type="wsdl" bindingName="{urn:sap-com:document:sap:rfc:functions}ZFM_CP_INQUIRY_DK_soap12" soapVersion="1_2" anonymous="optional" definition="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_cp_inquiry_dk/100/zfm_cp_inquiry_dk/zfm_cp_inquiry_dk?sap-client=100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/rfc/sap/zfm_cp_inquiry_dk/100/zfm_cp_inquiry_dk/zfm_cp_inquiry_dk</con:endpoint></con:endpoints><con:operation id="539dc94b-407e-41fa-b7c7-197d54911448" isOneWay="false" action="urn:sap-com:document:sap:rfc:functions:ZFM_CP_INQUIRY_DK:ZFM_CP_INQUIRY_DKRequest" name="ZFM_CP_INQUIRY_DK" bindingOperationName="ZFM_CP_INQUIRY_DK" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ade99aa1-4380-4e59-a8dd-fd23c839b612" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/rfc/sap/zfm_cp_inquiry_dk/100/zfm_cp_inquiry_dk/zfm_cp_inquiry_dk</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <urn:ZFM_CP_INQUIRY_DK>\r
+         <CUST_ID>12</CUST_ID>\r
+         <!--Optional:-->\r
+         <INQ_DETAIL>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+              
+            </item>\r
+         </INQ_DETAIL>\r
+      </urn:ZFM_CP_INQUIRY_DK>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:username>ABAPER2</con:username><con:password>abap@123</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:sap-com:document:sap:rfc:functions/ZFM_CP_INQUIRY_DK/ZFM_CP_INQUIRY_DKRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="1c14f985-c0df-495e-b574-735c3acd9114" wsaVersion="NONE" name="ZFM_CP_INQUIRY_DK" type="wsdl" bindingName="{urn:sap-com:document:sap:rfc:functions}ZFM_CP_INQUIRY_DK" soapVersion="1_1" anonymous="optional" definition="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_cp_inquiry_dk/100/zfm_cp_inquiry_dk/zfm_cp_inquiry_dk?sap-client=100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_cp_inquiry_dk/100/zfm_cp_inquiry_dk/zfm_cp_inquiry_dk?sap-client=100"><con:part><con:url>http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_cp_inquiry_dk/100/zfm_cp_inquiry_dk/zfm_cp_inquiry_dk?sap-client=100</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:sap-com:document:sap:rfc:functions" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <wsdl:documentation>
+    <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl"/>
+  </wsdl:documentation>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="BN__ZFM_CP_INQUIRY_DK">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization wsp:Optional="true" xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" wsp:Optional="true" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BN__ZFM_CP_INQUIRY_DK_soap12">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization wsp:Optional="true" xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" wsp:Optional="true" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="IF__ZFM_CP_INQUIRY_DK">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+          <sapsession:enableSession>false</sapsession:enableSession>
+        </sapsession:Session>
+        <sapcentraladmin:CentralAdministration wsp:Optional="true" xmlns:sapcentraladmin="http://www.sap.com/webas/700/soap/features/CentralAdministration/">
+          <sapcentraladmin:BusinessApplicationID>FD51D02D79A11EED92D8367980F05415</sapcentraladmin:BusinessApplicationID>
+        </sapcentraladmin:CentralAdministration>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZFM_CP_INQUIRY_DK">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <xsd:simpleType name="char1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char12">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="12"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char8">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="8"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="date10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10"/>
+          <xsd:pattern value="\d\d\d\d-\d\d-\d\d"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="ZSCUSTINQ_DK">
+        <xsd:sequence>
+          <xsd:element name="VBELN" type="tns:char10"/>
+          <xsd:element name="ERDAT" type="tns:date10"/>
+          <xsd:element name="ERNAM" type="tns:char12"/>
+          <xsd:element name="ANGDT" type="tns:date10"/>
+          <xsd:element name="BNDDT" type="tns:date10"/>
+          <xsd:element name="AUDAT" type="tns:date10"/>
+          <xsd:element name="GUEBG" type="tns:date10"/>
+          <xsd:element name="GUEEN" type="tns:date10"/>
+          <xsd:element name="VDATU" type="tns:date10"/>
+          <xsd:element name="AUTLF" type="tns:char1"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TABLE_OF_ZSCUSTINQ_DK">
+        <xsd:sequence>
+          <xsd:element name="item" type="tns:ZSCUSTINQ_DK" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ZFM_CP_INQUIRY_DK">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CUST_ID" type="tns:char10"/>
+            <xsd:element name="INQ_DETAIL" type="tns:TABLE_OF_ZSCUSTINQ_DK" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZFM_CP_INQUIRY_DKResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="INQ_DETAIL" type="tns:TABLE_OF_ZSCUSTINQ_DK" minOccurs="0"/>
+            <xsd:element name="RETURN" type="tns:char8"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ZFM_CP_INQUIRY_DK">
+    <wsdl:part name="parameters" element="tns:ZFM_CP_INQUIRY_DK"/>
+  </wsdl:message>
+  <wsdl:message name="ZFM_CP_INQUIRY_DKResponse">
+    <wsdl:part name="parameter" element="tns:ZFM_CP_INQUIRY_DKResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ZFM_CP_INQUIRY_DK">
+    <wsdl:documentation>
+      <sapdoc:sapdoc xmlns:sapdoc="urn:sap:esi:documentation">
+        <sapdoc:docitem docURL="http://KTINDHNA02.kaartech.com:8000/sap/bc/esdt/docu/sd_text?sap-client=100&amp;sd_name=ZFM_CP_INQUIRY_DK"/>
+      </sapdoc:sapdoc>
+    </wsdl:documentation>
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#IF__ZFM_CP_INQUIRY_DK"/>
+    </wsp:Policy>
+    <wsdl:operation name="ZFM_CP_INQUIRY_DK">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZFM_CP_INQUIRY_DK"/>
+      </wsp:Policy>
+      <wsdl:input message="tns:ZFM_CP_INQUIRY_DK"/>
+      <wsdl:output message="tns:ZFM_CP_INQUIRY_DKResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ZFM_CP_INQUIRY_DK" type="tns:ZFM_CP_INQUIRY_DK">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__ZFM_CP_INQUIRY_DK"/>
+    </wsp:Policy>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ZFM_CP_INQUIRY_DK">
+      <soap:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZFM_CP_INQUIRY_DK:ZFM_CP_INQUIRY_DKRequest" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZFM_CP_INQUIRY_DK_soap12" type="tns:ZFM_CP_INQUIRY_DK">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__ZFM_CP_INQUIRY_DK_soap12"/>
+    </wsp:Policy>
+    <wsoap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ZFM_CP_INQUIRY_DK">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZFM_CP_INQUIRY_DK:ZFM_CP_INQUIRY_DKRequest" style="document"/>
+      <wsdl:input>
+        <wsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZFM_CP_INQUIRY_DK">
+    <wsdl:port name="ZFM_CP_INQUIRY_DK" binding="tns:ZFM_CP_INQUIRY_DK">
+      <soap:address location="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/rfc/sap/zfm_cp_inquiry_dk/100/zfm_cp_inquiry_dk/zfm_cp_inquiry_dk"/>
+    </wsdl:port>
+    <wsdl:port name="ZFM_CP_INQUIRY_DK_soap12" binding="tns:ZFM_CP_INQUIRY_DK_soap12">
+      <wsoap12:address location="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/rfc/sap/zfm_cp_inquiry_dk/100/zfm_cp_inquiry_dk/zfm_cp_inquiry_dk"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/rfc/sap/zfm_cp_inquiry_dk/100/zfm_cp_inquiry_dk/zfm_cp_inquiry_dk</con:endpoint></con:endpoints><con:operation id="d4800c10-cac9-46e9-9714-93091126ea95" isOneWay="false" action="urn:sap-com:document:sap:rfc:functions:ZFM_CP_INQUIRY_DK:ZFM_CP_INQUIRY_DKRequest" name="ZFM_CP_INQUIRY_DK" bindingOperationName="ZFM_CP_INQUIRY_DK" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3122ad29-bbdb-4409-9a87-b347803f36a7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/rfc/sap/zfm_cp_inquiry_dk/100/zfm_cp_inquiry_dk/zfm_cp_inquiry_dk</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:ZFM_CP_INQUIRY_DK>\r
+         <CUST_ID>?</CUST_ID>\r
+         <!--Optional:-->\r
+         <INQ_DETAIL>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+               <VBELN>?</VBELN>\r
+               <ERDAT>?</ERDAT>\r
+               <ERNAM>?</ERNAM>\r
+               <ANGDT>?</ANGDT>\r
+               <BNDDT>?</BNDDT>\r
+               <AUDAT>?</AUDAT>\r
+               <GUEBG>?</GUEBG>\r
+               <GUEEN>?</GUEEN>\r
+               <VDATU>?</VDATU>\r
+               <AUTLF>?</AUTLF>\r
+            </item>\r
+         </INQ_DETAIL>\r
+      </urn:ZFM_CP_INQUIRY_DK>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:sap-com:document:sap:rfc:functions:ZFM_CP_INQUIRY_DK:ZFM_CP_INQUIRY_DKRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="db318492-8236-4f6e-973f-5703316cfdf1" activeEnvironment="Default" name="SK_E_LOGIN" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="1efdcbb0-e8e1-4101-9609-b2d8ed83c1d9" wsaVersion="NONE" name="SI_DK_ELOGINBinding" type="wsdl" bindingName="{http://Employee_sk_Sen_786.com}SI_DK_ELOGINBinding" soapVersion="1_1" anonymous="optional" definition="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/bb236b38e7fa3a1e9fc1f6a9f27f5a96" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/bb236b38e7fa3a1e9fc1f6a9f27f5a96"><con:part><con:url>http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/bb236b38e7fa3a1e9fc1f6a9f27f5a96</con:url><con:content><![CDATA[<wsdl:definitions name="SI_DK_ELOGIN" targetNamespace="http://Employee_sk_Sen_786.com" xmlns:rfc="urn:sap-com:document:sap:rfc:functions" xmlns:p1="http://Employee_sk_Sen_786.com" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation/>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="OP_SI_DK_ELOGIN"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:sap-com:document:sap:rfc:functions">
+      <xsd:element name="ZFM_EMP_LOGIN_DK.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="RESULT" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>Character field, 8 characters long</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="8"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="PROFILE_DET" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>Transfer Structure for Object 0002: Company Code Get Detail</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="BAPI0002_2" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZFM_EMP_LOGIN_DK">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="PASSWORD">
+              <xsd:annotation>
+                <xsd:documentation>Password for Employee</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="UID">
+              <xsd:annotation>
+                <xsd:documentation>Personnel number</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="8"/>
+                  <xsd:pattern value="\d+"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="PROFILE_DET" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>Transfer Structure for Object 0002: Company Code Get Detail</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="BAPI0002_2" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="BAPI0002_2">
+        <xsd:annotation>
+          <xsd:documentation>Transfer Structure for Object 0002: Company Code Get Detail</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="COMP_CODE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Company Code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="COMP_NAME" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Name of Company Code or Company</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="25"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CITY" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>City</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="25"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="COUNTRY" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Country Key</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CURRENCY" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Currency Key</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="5"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LANGU" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Language Key</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CHRT_ACCTS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Chart of Accounts</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="FY_VARIANT" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Fiscal Year Variant</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="VAT_REG_NO" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>VAT Registration Number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="20"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="COMPANY" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Company</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="6"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ADDR_NO" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Address number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="COUNTRY_ISO" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Country ISO code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CURRENCY_ISO" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>ISO currency code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LANGU_ISO" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>2-Character SAP Language Code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="rfc.ZFM_EMP_LOGIN_DK.Input">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_EMP_LOGIN_DK"/>
+  </wsdl:message>
+  <wsdl:message name="rfc.ZFM_EMP_LOGIN_DK.Output">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_EMP_LOGIN_DK.Response"/>
+  </wsdl:message>
+  <wsdl:portType name="SI_DK_ELOGIN">
+    <wsdl:documentation/>
+    <wsdl:operation name="SI_DK_ELOGIN">
+      <wsdl:documentation/>
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_DK_ELOGIN"/>
+      </wsp:Policy>
+      <wsdl:input message="p1:rfc.ZFM_EMP_LOGIN_DK.Input"/>
+      <wsdl:output message="p1:rfc.ZFM_EMP_LOGIN_DK.Output"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_DK_ELOGINBinding" type="p1:SI_DK_ELOGIN">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <wsdl:operation name="SI_DK_ELOGIN">
+      <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_DK_ELOGINService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_DK_ELOGINBinding">
+      <soap:address location="http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_ELOGIN&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_ELOGIN&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_DK_ELOGINBinding">
+      <soap:address location="https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_ELOGIN&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_ELOGIN&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_ELOGIN&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_ELOGIN&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:endpoint>https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_ELOGIN&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_ELOGIN&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint></con:endpoints><con:operation id="a793be8a-9375-4206-9569-0630b41c5db1" isOneWay="false" action="http://sap.com/xi/WebService/soap1.1" name="SI_DK_ELOGIN" bindingOperationName="SI_DK_ELOGIN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="49080c4e-69ff-4b3a-b7b8-e3cb1d13f26c" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_ELOGIN&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_ELOGIN&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:ZFM_EMP_LOGIN_DK>\r
+         <!--You may enter the following 3 items in any order-->\r
+         <PASSWORD>ABAP@3</PASSWORD>\r
+         <UID>3</UID>\r
+         <!--Optional:-->\r
+         
+      </urn:ZFM_EMP_LOGIN_DK>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>pouser@2</con:username><con:password>Tech@2022</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sap.com/xi/WebService/soap1.1"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

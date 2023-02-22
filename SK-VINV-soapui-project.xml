@@ -1,0 +1,1551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="6e0ca2df-d8ab-42cb-a228-78c72fcb5aac" activeEnvironment="Default" name="SK_VINV" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="52affea6-d2f8-4b91-9f01-53ef2f86a6b7" wsaVersion="NONE" name="SI_DK_INVBinding" type="wsdl" bindingName="{http://Employee_sk_Sen_786.com}SI_DK_INVBinding" soapVersion="1_1" anonymous="optional" definition="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/1af03237be773b928b20fa86576b8893" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/1af03237be773b928b20fa86576b8893"><con:part><con:url>http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/1af03237be773b928b20fa86576b8893</con:url><con:content><![CDATA[<wsdl:definitions name="SI_DK_INV" targetNamespace="http://Employee_sk_Sen_786.com" xmlns:rfc="urn:sap-com:document:sap:rfc:functions" xmlns:p1="http://Employee_sk_Sen_786.com" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation/>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="OP_SI_DK_INV"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:sap-com:document:sap:rfc:functions">
+      <xsd:element name="ZFM_VEN_INV_DK">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="VENDOR_ID">
+              <xsd:annotation>
+                <xsd:documentation>Account Number of Vendor or Creditor</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="10"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="EX_LIST" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>Document Header: Invoice Receipt</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="RBKP" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZFM_VEN_INV_DK.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="EX_LIST" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>Document Header: Invoice Receipt</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="RBKP" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="time">
+        <xsd:union memberTypes="xsd:time genericTime"/>
+      </xsd:simpleType>
+      <xsd:simpleType name="date">
+        <xsd:union memberTypes="xsd:date genericDate"/>
+      </xsd:simpleType>
+      <xsd:simpleType name="genericDate">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="....-..-.."/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="genericTime">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="..:..:.."/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="RBKP">
+        <xsd:annotation>
+          <xsd:documentation>Document Header: Invoice Receipt</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="MANDT" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Client</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BELNR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Document Number of an Invoice Document</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="GJAHR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Fiscal Year</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+                <xsd:pattern value="\d+"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BLART" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Document type</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BLDAT" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Document Date in Document</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="BUDAT" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Posting Date in the Document</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="USNAM" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>User Name</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="12"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="TCODE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Transaction Code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="20"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CPUDT" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Day On Which Accounting Document Was Entered</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="CPUTM" type="time" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Time of Entry</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="VGART" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Transaction Type in AG08 (Internal Document Type)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="XBLNR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Reference Document Number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="16"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BUKRS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Company Code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LIFNR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Different Invoicing Party</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="WAERS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Currency Key</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="5"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="KURSF" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Exchange rate</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="9"/>
+                <xsd:fractionDigits value="5"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="RMWWR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Gross invoice amount in document currency</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BEZNK" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Unplanned delivery costs</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="WMWST1" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax Amount in Document Currency with +/- Sign</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="MWSKZ1" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="WMWST2" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Obsolete: tax amount in document currency - do NOT use!</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="MWSKZ2" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Obsolete: sales tax code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ZTERM" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Terms of payment key</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ZBD1T" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Cash discount days 1</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="3"/>
+                <xsd:fractionDigits value="0"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ZBD1P" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Cash discount percentage 1</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="5"/>
+                <xsd:fractionDigits value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ZBD2T" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Cash discount days 2</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="3"/>
+                <xsd:fractionDigits value="0"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ZBD2P" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Cash Discount Percentage 2</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="5"/>
+                <xsd:fractionDigits value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ZBD3T" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Net Payment Terms Period</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="3"/>
+                <xsd:fractionDigits value="0"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="WSKTO" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Cash Discount Amount in Document Currency</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="XRECH" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicator: post invoice</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BKTXT" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Document Header Text</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="25"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="SAPRL" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>SAP Release</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LOGSYS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Logical system</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="XMWST" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Calculate tax automatically</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="STBLG" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Reversal document number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="STJAH" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Fiscal year of reversal document</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+                <xsd:pattern value="\d+"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="MWSKZ_BNK" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax Code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="TXJCD_BNK" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax Jurisdiction</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="15"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="IVTYP" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Origin of a Logistics Invoice Verification Document</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="XRBTX" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicator: more than one tax code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="REPART" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicator: Invoice Verification Type</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="RBSTAT" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Invoice document status</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="KNUMVE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Document condition - own conditions</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="KNUMVL" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Document condition - vendor error</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ARKUEN" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Automatic Invoice Reduction Amount (Net)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ARKUEMW" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Sales Tax Portion of Automatic Invoice Reduction Amount</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="MAKZN" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Manually accepted net difference amount</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="MAKZMW" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax Amount Accepted Manually</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LIEFFN" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Vendor error (exclusive of tax)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LIEFFMW" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax in vendor error</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="XAUTAKZ" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicates automatically accepted invoices</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ESRNR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>POR subscriber number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="11"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ESRPZ" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>POR check digit</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ESRRE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>POR reference number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="27"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="QSSHB" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Withholding Tax Base Amount</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="QSFBT" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Withholding Tax-Exempt Amount (in Document Currency)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="QSSKZ" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Withholding Tax Code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="DIEKZ" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Service indicator (foreign payment)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LANDL" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Supplying Country</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LZBKZ" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>State central bank indicator</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="TXKRS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Exchange Rate for Taxes</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="9"/>
+                <xsd:fractionDigits value="5"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CTXKRS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Rate for Tax Values in Local Currency (Plants Abroad)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="9"/>
+                <xsd:fractionDigits value="5"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="EMPFB" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Payee/Payer</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BVTYP" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Partner bank type</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="HBKID" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Short key for a house bank</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="5"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ZUONR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Assignment number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="18"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ZLSPR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Payment Block Key</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ZLSCH" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Payment Method</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ZFBDT" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Baseline date for due date calculation</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="KIDNO" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Payment Reference</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="30"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="REBZG" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Invoice reference: Document number for invoice reference</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="REBZJ" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Fiscal Year of the Relevant Invoice (for Credit Memo)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+                <xsd:pattern value="\d+"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="XINVE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicator: Capital Goods Affected?</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="EGMLD" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Reporting Country for Delivery of Goods within the EU</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="XEGDR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicator: Triangular deal within the EU ?</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="VATDATE" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax Reporting Date</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="HKONT" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>General Ledger Account</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="J_1BNFTYPE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Nota Fiscal Type</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BRNCH" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Branch Number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ERFPR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Entry profile: Logistics Invoice Verification</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="12"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="SECCO" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Section Code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="NAME1" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Name 1</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="35"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="NAME2" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Name 2</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="35"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="NAME3" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Name 3</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="35"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="NAME4" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Name 4</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="35"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="PSTLZ" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Postal Code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ORT01" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>City</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="35"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LAND1" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Country Key</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="STRAS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Street and House Number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="35"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="PFACH" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>PO Box</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="PSTL2" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>P.O. Box Postal Code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="PSKTO" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Account Number of Bank Account At Post Office</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="16"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BANKN" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Bank account number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="18"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BANKL" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Bank number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="15"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BANKS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Bank country key</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="STCD1" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax Number 1</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="16"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="STCD2" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax Number 2</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="11"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="STKZU" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Liable for VAT</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="STKZA" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicator: Business Partner Subject to Equalization Tax?</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="REGIO" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Region (State, Province, County)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BKONT" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Bank Control Key</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="DTAWS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Instruction key for data medium exchange</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="DTAMS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Report key for data medium exchange</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="SPRAS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Character field of length 1</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="XCPDK" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicator: Is the account a one-time account?</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="EMPFG" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Payee code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="16"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="FITYP" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax type</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="STCDT" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax Number Type</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="STKZN" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Natural Person</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="STCD3" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax Number 3</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="18"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="STCD4" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tax Number 4</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="18"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BKREF" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Reference specifications for bank details</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="20"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="J_1KFREPRE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Name of Representative</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="J_1KFTBUS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Type of Business</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="30"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="J_1KFTIND" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Type of Industry</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="30"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ANRED" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Title</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="15"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="STCEG" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>VAT Registration Number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="20"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ERNAME" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Entered by external system user</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="12"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="REINDAT" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Invoice Receipt Date</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="UZAWE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Payment method supplement</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="FDLEV" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Planning Level</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="FDTAG" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Planning Date</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ZBFIX" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Fixed Payment Terms</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="FRGKZ" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicator: Release Required</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ERFNAM" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Name of the Processor Who Entered the Object</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="12"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BUPLA" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Business Place</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="FILKD" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Account Number of the Branch</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="GSBER" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Business Area</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LOTKZ" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Lot Number for Documents</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="SGTXT" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Item Text</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="50"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="INV_TRAN" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Transaction in Logistics Invoice Verification</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="PREPAY_STATUS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Prepayment Status</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="PREPAY_AWKEY" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Invoice Document Number Created for Prepayment</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="20"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ASSIGN_STATUS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Is the invoice in the assignment test process?</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ASSIGN_NEXT_DATE" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Date of Next Assignment Test</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ASSIGN_END_DATE" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>End Date of Assignment Test Period</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="COPY_BY_BELNR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Invoice Document Number of Original Invoice</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="COPY_BY_YEAR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Fiscal Year of Original Invoice</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+                <xsd:pattern value="\d+"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="COPY_TO_BELNR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Invoice Document Number of Copied Invoice</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="COPY_TO_YEAR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Fiscal Year of Copied Invoice</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+                <xsd:pattern value="\d+"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="COPY_USER" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>User That Reversed and Copied the Invoice</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="12"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="KURSX" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Market Data Exchange Rate</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="28"/>
+                <xsd:fractionDigits value="14"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="WWERT" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Translation date</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="XREF3" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Reference key for line item</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="20"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="J_1TPBUPL" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Branch Code</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="5"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="rfc.ZFM_VEN_INV_DK.Input">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_VEN_INV_DK"/>
+  </wsdl:message>
+  <wsdl:message name="rfc.ZFM_VEN_INV_DK.Output">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_VEN_INV_DK.Response"/>
+  </wsdl:message>
+  <wsdl:portType name="SI_DK_INV">
+    <wsdl:documentation/>
+    <wsdl:operation name="SI_DK_INV">
+      <wsdl:documentation/>
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_DK_INV"/>
+      </wsp:Policy>
+      <wsdl:input message="p1:rfc.ZFM_VEN_INV_DK.Input"/>
+      <wsdl:output message="p1:rfc.ZFM_VEN_INV_DK.Output"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_DK_INVBinding" type="p1:SI_DK_INV">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <wsdl:operation name="SI_DK_INV">
+      <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_DK_INVService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_DK_INVBinding">
+      <soap:address location="http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_VINV&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_INV&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_DK_INVBinding">
+      <soap:address location="https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_VINV&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_INV&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_VINV&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_INV&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:endpoint>https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_VINV&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_INV&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint></con:endpoints><con:operation id="251b5e19-06aa-4601-ab5c-8b2923587680" isOneWay="false" action="http://sap.com/xi/WebService/soap1.1" name="SI_DK_INV" bindingOperationName="SI_DK_INV" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f6282816-9a73-4f23-90e4-338b8c52dbf4" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_VINV&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_INV&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:ZFM_VEN_INV_DK>\r
+         <!--You may enter the following 2 items in any order-->\r
+         <VENDOR_ID>MOHANRAJ</VENDOR_ID>\r
+         <!--Optional:-->\r
+         <EX_LIST>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+              
+            </item>\r
+         </EX_LIST>\r
+      </urn:ZFM_VEN_INV_DK>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>pouser@2</con:username><con:password>Tech@2022</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sap.com/xi/WebService/soap1.1"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

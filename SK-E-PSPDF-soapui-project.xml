@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2527b2ca-59a0-4276-8e11-ce9203600913" activeEnvironment="Default" name="SK_E_PSPDF" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="cfff53c6-f870-40e5-8582-96464e9715ec" wsaVersion="NONE" name="SI_DK_EPSPDFBinding" type="wsdl" bindingName="{http://Employee_sk_Sen_786.com}SI_DK_EPSPDFBinding" soapVersion="1_1" anonymous="optional" definition="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/b48376849d4634cabd18e3d36420683d" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/b48376849d4634cabd18e3d36420683d"><con:part><con:url>http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/b48376849d4634cabd18e3d36420683d</con:url><con:content><![CDATA[<wsdl:definitions name="SI_DK_EPSPDF" targetNamespace="http://Employee_sk_Sen_786.com" xmlns:rfc="urn:sap-com:document:sap:rfc:functions" xmlns:p1="http://Employee_sk_Sen_786.com" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation/>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="OP_SI_DK_EPSPDF"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:sap-com:document:sap:rfc:functions">
+      <xsd:element name="ZFM_EMP_PSPDF_DK.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="BASE64" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="PAYSLIP_PDF" type="xsd:base64Binary" minOccurs="0"/>
+            <xsd:element name="PAYSLIP_HTML">
+              <xsd:annotation>
+                <xsd:documentation>HTML text</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="BAPI7004_HTML" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PAYSLIP_TAB">
+              <xsd:annotation>
+                <xsd:documentation>Form information (see also PC408)</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="BAPI7004_PAYSLIP" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZFM_EMP_PSPDF_DK">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="EMPID">
+              <xsd:annotation>
+                <xsd:documentation>Personnel number</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="8"/>
+                  <xsd:pattern value="\d+"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="SEQNO">
+              <xsd:annotation>
+                <xsd:documentation>Sequence Number</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="5"/>
+                  <xsd:pattern value="\d+"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="PAYSLIP_HTML">
+              <xsd:annotation>
+                <xsd:documentation>HTML text</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="BAPI7004_HTML" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PAYSLIP_TAB">
+              <xsd:annotation>
+                <xsd:documentation>Form information (see also PC408)</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="BAPI7004_PAYSLIP" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="BAPI7004_PAYSLIP">
+        <xsd:annotation>
+          <xsd:documentation>Form information (see also PC408)</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="FORMAT_COL" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tag column</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="TEXT_COL" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Text (length 132)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="132"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BAPI7004_HTML">
+        <xsd:annotation>
+          <xsd:documentation>HTML text</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="LINE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>HTML container</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="255"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="rfc.ZFM_EMP_PSPDF_DK.Input">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_EMP_PSPDF_DK"/>
+  </wsdl:message>
+  <wsdl:message name="rfc.ZFM_EMP_PSPDF_DK.Output">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_EMP_PSPDF_DK.Response"/>
+  </wsdl:message>
+  <wsdl:portType name="SI_DK_EPSPDF">
+    <wsdl:documentation/>
+    <wsdl:operation name="SI_DK_EPSPDF">
+      <wsdl:documentation/>
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_DK_EPSPDF"/>
+      </wsp:Policy>
+      <wsdl:input message="p1:rfc.ZFM_EMP_PSPDF_DK.Input"/>
+      <wsdl:output message="p1:rfc.ZFM_EMP_PSPDF_DK.Output"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_DK_EPSPDFBinding" type="p1:SI_DK_EPSPDF">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <wsdl:operation name="SI_DK_EPSPDF">
+      <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_DK_EPSPDFService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_DK_EPSPDFBinding">
+      <soap:address location="http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_EPSPDF&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_EPSPDF&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_DK_EPSPDFBinding">
+      <soap:address location="https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_EPSPDF&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_EPSPDF&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_EPSPDF&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_EPSPDF&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:endpoint>https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_EPSPDF&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_EPSPDF&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint></con:endpoints><con:operation id="d56c7edc-03fa-46fe-87cf-984c029ca39b" isOneWay="false" action="http://sap.com/xi/WebService/soap1.1" name="SI_DK_EPSPDF" bindingOperationName="SI_DK_EPSPDF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="da8a37c3-e8f3-4269-933b-d3a6da673499" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_000_SK_EPSPDF&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DK_EPSPDF&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:ZFM_EMP_PSPDF_DK>\r
+         <!--You may enter the following 4 items in any order-->\r
+         <EMPID>3</EMPID>\r
+         <SEQNO>005</SEQNO>\r
+         <PAYSLIP_HTML>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+             
+            </item>\r
+         </PAYSLIP_HTML>\r
+         <PAYSLIP_TAB>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+              
+            </item>\r
+         </PAYSLIP_TAB>\r
+      </urn:ZFM_EMP_PSPDF_DK>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>pouser@2</con:username><con:password>Tech@2022</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sap.com/xi/WebService/soap1.1"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

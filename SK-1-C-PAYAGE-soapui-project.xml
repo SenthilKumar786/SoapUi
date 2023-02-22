@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="bcf22499-21b5-4cd3-aabc-0b65188dae11" activeEnvironment="Default" name="SK_1_C_PAYAGE" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="99edc850-c4b0-48d1-b669-521572bb68d5" wsaVersion="NONE" name="ZFM_CP_PAYAGING_DK_soap12" type="wsdl" bindingName="{urn:sap-com:document:sap:rfc:functions}ZFM_CP_PAYAGING_DK_soap12" soapVersion="1_2" anonymous="optional" definition="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_cp_payaging_dk/100/zfm_cp_payaging_dk/zfm_cp_payaging_dk?sap-client=100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/rfc/sap/zfm_cp_payaging_dk/100/zfm_cp_payaging_dk/zfm_cp_payaging_dk</con:endpoint></con:endpoints><con:operation id="c2ed0fe2-9ee1-4e5d-80d9-69da5a324359" isOneWay="false" action="urn:sap-com:document:sap:rfc:functions:ZFM_CP_PAYAGING_DK:ZFM_CP_PAYAGING_DKRequest" name="ZFM_CP_PAYAGING_DK" bindingOperationName="ZFM_CP_PAYAGING_DK" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2ac2de0d-0cb0-438e-a4ab-65d6b8d8f448" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/rfc/sap/zfm_cp_payaging_dk/100/zfm_cp_payaging_dk/zfm_cp_payaging_dk</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <urn:ZFM_CP_PAYAGING_DK>\r
+         <IT_DET>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+               
+            </item>\r
+         </IT_DET>\r
+         <I_COMCODE>0001</I_COMCODE>\r
+         <I_CUSID>12</I_CUSID>\r
+         
+      </urn:ZFM_CP_PAYAGING_DK>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:username>ABAPER2</con:username><con:password>abap@123</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:sap-com:document:sap:rfc:functions/ZFM_CP_PAYAGING_DK/ZFM_CP_PAYAGING_DKRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="66c0c7d2-93a7-4b83-beaa-4d0fa652c468" wsaVersion="NONE" name="ZFM_CP_PAYAGING_DK" type="wsdl" bindingName="{urn:sap-com:document:sap:rfc:functions}ZFM_CP_PAYAGING_DK" soapVersion="1_1" anonymous="optional" definition="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_cp_payaging_dk/100/zfm_cp_payaging_dk/zfm_cp_payaging_dk?sap-client=100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_cp_payaging_dk/100/zfm_cp_payaging_dk/zfm_cp_payaging_dk?sap-client=100"><con:part><con:url>http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_cp_payaging_dk/100/zfm_cp_payaging_dk/zfm_cp_payaging_dk?sap-client=100</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:sap-com:document:sap:rfc:functions" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <wsdl:documentation>
+    <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl"/>
+  </wsdl:documentation>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="BN__ZFM_CP_PAYAGING_DK">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization wsp:Optional="true" xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" wsp:Optional="true" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BN__ZFM_CP_PAYAGING_DK_soap12">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization wsp:Optional="true" xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" wsp:Optional="true" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="IF__ZFM_CP_PAYAGING_DK">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+          <sapsession:enableSession>false</sapsession:enableSession>
+        </sapsession:Session>
+        <sapcentraladmin:CentralAdministration wsp:Optional="true" xmlns:sapcentraladmin="http://www.sap.com/webas/700/soap/features/CentralAdministration/">
+          <sapcentraladmin:BusinessApplicationID>FD51D02D79A11EED92D8367980F05415</sapcentraladmin:BusinessApplicationID>
+        </sapcentraladmin:CentralAdministration>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZFM_CP_PAYAGING_DK">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <xsd:simpleType name="char1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char11">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="11"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char12">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="12"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char15">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="15"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char16">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="16"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char18">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="18"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char2">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char20">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="20"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char220">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="220"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char30">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="30"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char32">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="32"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char35">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="35"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char4">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char5">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="5"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char50">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="50"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char60">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="60"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="cuky5">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="5"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="date10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10"/>
+          <xsd:pattern value="\d\d\d\d-\d\d-\d\d"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal23.4">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="23"/>
+          <xsd:fractionDigits value="4"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal3.0">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="3"/>
+          <xsd:fractionDigits value="0"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal5.3">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="5"/>
+          <xsd:fractionDigits value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal7.5">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="7"/>
+          <xsd:fractionDigits value="5"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="lang">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric2">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric4">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric6">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="6"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="BAPI3007_2">
+        <xsd:sequence>
+          <xsd:element name="COMP_CODE" type="tns:char4"/>
+          <xsd:element name="CUSTOMER" type="tns:char10"/>
+          <xsd:element name="SP_GL_IND" type="tns:char1"/>
+          <xsd:element name="CLEAR_DATE" type="tns:date10"/>
+          <xsd:element name="CLR_DOC_NO" type="tns:char10"/>
+          <xsd:element name="ALLOC_NMBR" type="tns:char18"/>
+          <xsd:element name="FISC_YEAR" type="tns:numeric4"/>
+          <xsd:element name="DOC_NO" type="tns:char10"/>
+          <xsd:element name="ITEM_NUM" type="tns:numeric3"/>
+          <xsd:element name="PSTNG_DATE" type="tns:date10"/>
+          <xsd:element name="DOC_DATE" type="tns:date10"/>
+          <xsd:element name="ENTRY_DATE" type="tns:date10"/>
+          <xsd:element name="CURRENCY" type="tns:cuky5"/>
+          <xsd:element name="LOC_CURRCY" type="tns:cuky5"/>
+          <xsd:element name="REF_DOC_NO" type="tns:char16"/>
+          <xsd:element name="DOC_TYPE" type="tns:char2"/>
+          <xsd:element name="FIS_PERIOD" type="tns:numeric2"/>
+          <xsd:element name="POST_KEY" type="tns:char2"/>
+          <xsd:element name="DB_CR_IND" type="tns:char1"/>
+          <xsd:element name="BUS_AREA" type="tns:char4"/>
+          <xsd:element name="TAX_CODE" type="tns:char2"/>
+          <xsd:element name="LC_AMOUNT" type="tns:decimal23.4"/>
+          <xsd:element name="AMT_DOCCUR" type="tns:decimal23.4"/>
+          <xsd:element name="LC_TAX" type="tns:decimal23.4"/>
+          <xsd:element name="TX_DOC_CUR" type="tns:decimal23.4"/>
+          <xsd:element name="ITEM_TEXT" type="tns:char50"/>
+          <xsd:element name="BRANCH" type="tns:char10"/>
+          <xsd:element name="BLINE_DATE" type="tns:date10"/>
+          <xsd:element name="PMNTTRMS" type="tns:char4"/>
+          <xsd:element name="DSCT_DAYS1" type="tns:decimal3.0"/>
+          <xsd:element name="DSCT_DAYS2" type="tns:decimal3.0"/>
+          <xsd:element name="NETTERMS" type="tns:decimal3.0"/>
+          <xsd:element name="DSCT_PCT1" type="tns:decimal5.3"/>
+          <xsd:element name="DSCT_PCT2" type="tns:decimal5.3"/>
+          <xsd:element name="DISC_BASE" type="tns:decimal23.4"/>
+          <xsd:element name="DSC_AMT_LC" type="tns:decimal23.4"/>
+          <xsd:element name="DSC_AMT_DC" type="tns:decimal23.4"/>
+          <xsd:element name="PYMT_METH" type="tns:char1"/>
+          <xsd:element name="PMNT_BLOCK" type="tns:char1"/>
+          <xsd:element name="FIXEDTERMS" type="tns:char1"/>
+          <xsd:element name="INV_REF" type="tns:char10"/>
+          <xsd:element name="INV_YEAR" type="tns:numeric4"/>
+          <xsd:element name="INV_ITEM" type="tns:numeric3"/>
+          <xsd:element name="DUNN_BLOCK" type="tns:char1"/>
+          <xsd:element name="DUNN_KEY" type="tns:char1"/>
+          <xsd:element name="LAST_DUNN" type="tns:date10"/>
+          <xsd:element name="DUNN_LEVEL" type="tns:numeric1"/>
+          <xsd:element name="DUNN_AREA" type="tns:char2"/>
+          <xsd:element name="DOC_STATUS" type="tns:char1"/>
+          <xsd:element name="NXT_DOCTYP" type="tns:char1"/>
+          <xsd:element name="VAT_REG_NO" type="tns:char20"/>
+          <xsd:element name="REASON_CDE" type="tns:char3"/>
+          <xsd:element name="PMTMTHSUPL" type="tns:char2"/>
+          <xsd:element name="REF_KEY_1" type="tns:char12"/>
+          <xsd:element name="REF_KEY_2" type="tns:char12"/>
+          <xsd:element name="T_CURRENCY" type="tns:cuky5"/>
+          <xsd:element name="AMOUNT" type="tns:decimal23.4"/>
+          <xsd:element name="NET_AMOUNT" type="tns:decimal23.4"/>
+          <xsd:element name="NAME" type="tns:char35"/>
+          <xsd:element name="NAME_2" type="tns:char35"/>
+          <xsd:element name="NAME_3" type="tns:char35"/>
+          <xsd:element name="NAME_4" type="tns:char35"/>
+          <xsd:element name="POSTL_CODE" type="tns:char10"/>
+          <xsd:element name="CITY" type="tns:char35"/>
+          <xsd:element name="COUNTRY" type="tns:char3"/>
+          <xsd:element name="STREET" type="tns:char35"/>
+          <xsd:element name="PO_BOX" type="tns:char10"/>
+          <xsd:element name="POBX_PCD" type="tns:char10"/>
+          <xsd:element name="POBK_CURAC" type="tns:char16"/>
+          <xsd:element name="BANK_ACCT" type="tns:char18"/>
+          <xsd:element name="BANK_KEY" type="tns:char15"/>
+          <xsd:element name="BANK_CTRY" type="tns:char3"/>
+          <xsd:element name="TAX_NO_1" type="tns:char16"/>
+          <xsd:element name="TAX_NO_2" type="tns:char11"/>
+          <xsd:element name="TAX" type="tns:char1"/>
+          <xsd:element name="EQUAL_TAX" type="tns:char1"/>
+          <xsd:element name="REGION" type="tns:char3"/>
+          <xsd:element name="CTRL_KEY" type="tns:char2"/>
+          <xsd:element name="INSTR_KEY" type="tns:char2"/>
+          <xsd:element name="PAYEE_CODE" type="tns:char16"/>
+          <xsd:element name="LANGU" type="tns:lang"/>
+          <xsd:element name="BILL_LIFE" type="tns:decimal3.0"/>
+          <xsd:element name="BE_TAXCODE" type="tns:char1"/>
+          <xsd:element name="BILLTAX_LC" type="tns:decimal23.4"/>
+          <xsd:element name="BILLTAX_FC" type="tns:decimal23.4"/>
+          <xsd:element name="LC_COL_CHG" type="tns:decimal23.4"/>
+          <xsd:element name="COLL_CHARG" type="tns:decimal23.4"/>
+          <xsd:element name="CHGS_TX_CD" type="tns:char2"/>
+          <xsd:element name="ISSUE_DATE" type="tns:date10"/>
+          <xsd:element name="USAGEDATE" type="tns:date10"/>
+          <xsd:element name="BILL_USAGE" type="tns:char1"/>
+          <xsd:element name="DOMICILE" type="tns:char60"/>
+          <xsd:element name="DRAWER" type="tns:char30"/>
+          <xsd:element name="CTRBNK_LOC" type="tns:char60"/>
+          <xsd:element name="DRAW_CITY1" type="tns:char30"/>
+          <xsd:element name="DRAWEE" type="tns:char30"/>
+          <xsd:element name="DRAW_CITY2" type="tns:char30"/>
+          <xsd:element name="DISCT_DAYS" type="tns:decimal3.0"/>
+          <xsd:element name="DISCT_RATE" type="tns:decimal7.5"/>
+          <xsd:element name="ACCEPTED" type="tns:char1"/>
+          <xsd:element name="BILLSTATUS" type="tns:char1"/>
+          <xsd:element name="PRTEST_IND" type="tns:char1"/>
+          <xsd:element name="BE_DEMAND" type="tns:char1"/>
+          <xsd:element name="OBJ_TYPE" type="tns:char5"/>
+          <xsd:element name="REF_DOC" type="tns:char10"/>
+          <xsd:element name="REF_ORG_UN" type="tns:char10"/>
+          <xsd:element name="REVERSAL_DOC" type="tns:char10"/>
+          <xsd:element name="SP_GL_TYPE" type="tns:char1"/>
+          <xsd:element name="NEG_POSTNG" type="tns:char1"/>
+          <xsd:element name="REF_DOC_NO_LONG" type="tns:char35"/>
+          <xsd:element name="BILL_DOC" type="tns:char10"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BAPIRET2">
+        <xsd:sequence>
+          <xsd:element name="TYPE" type="tns:char1"/>
+          <xsd:element name="ID" type="tns:char20"/>
+          <xsd:element name="NUMBER" type="tns:numeric3"/>
+          <xsd:element name="MESSAGE" type="tns:char220"/>
+          <xsd:element name="LOG_NO" type="tns:char20"/>
+          <xsd:element name="LOG_MSG_NO" type="tns:numeric6"/>
+          <xsd:element name="MESSAGE_V1" type="tns:char50"/>
+          <xsd:element name="MESSAGE_V2" type="tns:char50"/>
+          <xsd:element name="MESSAGE_V3" type="tns:char50"/>
+          <xsd:element name="MESSAGE_V4" type="tns:char50"/>
+          <xsd:element name="PARAMETER" type="tns:char32"/>
+          <xsd:element name="ROW" type="xsd:int"/>
+          <xsd:element name="FIELD" type="tns:char30"/>
+          <xsd:element name="SYSTEM" type="tns:char10"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TABLE_OF_BAPI3007_2">
+        <xsd:sequence>
+          <xsd:element name="item" type="tns:BAPI3007_2" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ZFM_CP_PAYAGING_DK">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="IT_DET" type="tns:TABLE_OF_BAPI3007_2"/>
+            <xsd:element name="I_COMCODE" type="tns:char4"/>
+            <xsd:element name="I_CUSID" type="tns:char10"/>
+            <xsd:element name="I_DOCDATE" type="tns:date10" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZFM_CP_PAYAGING_DKResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="BAPIRETURN" type="tns:BAPIRET2"/>
+            <xsd:element name="IT_DET" type="tns:TABLE_OF_BAPI3007_2"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ZFM_CP_PAYAGING_DK">
+    <wsdl:part name="parameters" element="tns:ZFM_CP_PAYAGING_DK"/>
+  </wsdl:message>
+  <wsdl:message name="ZFM_CP_PAYAGING_DKResponse">
+    <wsdl:part name="parameter" element="tns:ZFM_CP_PAYAGING_DKResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ZFM_CP_PAYAGING_DK">
+    <wsdl:documentation>
+      <sapdoc:sapdoc xmlns:sapdoc="urn:sap:esi:documentation">
+        <sapdoc:docitem docURL="http://KTINDHNA02.kaartech.com:8000/sap/bc/esdt/docu/sd_text?sap-client=100&amp;sd_name=ZFM_CP_PAYAGING_DK"/>
+      </sapdoc:sapdoc>
+    </wsdl:documentation>
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#IF__ZFM_CP_PAYAGING_DK"/>
+    </wsp:Policy>
+    <wsdl:operation name="ZFM_CP_PAYAGING_DK">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZFM_CP_PAYAGING_DK"/>
+      </wsp:Policy>
+      <wsdl:input message="tns:ZFM_CP_PAYAGING_DK"/>
+      <wsdl:output message="tns:ZFM_CP_PAYAGING_DKResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ZFM_CP_PAYAGING_DK" type="tns:ZFM_CP_PAYAGING_DK">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__ZFM_CP_PAYAGING_DK"/>
+    </wsp:Policy>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ZFM_CP_PAYAGING_DK">
+      <soap:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZFM_CP_PAYAGING_DK:ZFM_CP_PAYAGING_DKRequest" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZFM_CP_PAYAGING_DK_soap12" type="tns:ZFM_CP_PAYAGING_DK">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__ZFM_CP_PAYAGING_DK_soap12"/>
+    </wsp:Policy>
+    <wsoap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ZFM_CP_PAYAGING_DK">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZFM_CP_PAYAGING_DK:ZFM_CP_PAYAGING_DKRequest" style="document"/>
+      <wsdl:input>
+        <wsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZFM_CP_PAYAGING_DK">
+    <wsdl:port name="ZFM_CP_PAYAGING_DK" binding="tns:ZFM_CP_PAYAGING_DK">
+      <soap:address location="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/rfc/sap/zfm_cp_payaging_dk/100/zfm_cp_payaging_dk/zfm_cp_payaging_dk"/>
+    </wsdl:port>
+    <wsdl:port name="ZFM_CP_PAYAGING_DK_soap12" binding="tns:ZFM_CP_PAYAGING_DK_soap12">
+      <wsoap12:address location="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/rfc/sap/zfm_cp_payaging_dk/100/zfm_cp_payaging_dk/zfm_cp_payaging_dk"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/rfc/sap/zfm_cp_payaging_dk/100/zfm_cp_payaging_dk/zfm_cp_payaging_dk</con:endpoint></con:endpoints><con:operation id="09b031a8-6aaf-445b-b95d-5ec8049091b9" isOneWay="false" action="urn:sap-com:document:sap:rfc:functions:ZFM_CP_PAYAGING_DK:ZFM_CP_PAYAGING_DKRequest" name="ZFM_CP_PAYAGING_DK" bindingOperationName="ZFM_CP_PAYAGING_DK" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="874847d1-5c94-4a34-81b6-8cadb06b14f7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/rfc/sap/zfm_cp_payaging_dk/100/zfm_cp_payaging_dk/zfm_cp_payaging_dk</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:ZFM_CP_PAYAGING_DK>\r
+         <IT_DET>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+               <COMP_CODE>?</COMP_CODE>\r
+               <CUSTOMER>?</CUSTOMER>\r
+               <SP_GL_IND>?</SP_GL_IND>\r
+               <CLEAR_DATE>?</CLEAR_DATE>\r
+               <CLR_DOC_NO>?</CLR_DOC_NO>\r
+               <ALLOC_NMBR>?</ALLOC_NMBR>\r
+               <FISC_YEAR>?</FISC_YEAR>\r
+               <DOC_NO>?</DOC_NO>\r
+               <ITEM_NUM>?</ITEM_NUM>\r
+               <PSTNG_DATE>?</PSTNG_DATE>\r
+               <DOC_DATE>?</DOC_DATE>\r
+               <ENTRY_DATE>?</ENTRY_DATE>\r
+               <CURRENCY>?</CURRENCY>\r
+               <LOC_CURRCY>?</LOC_CURRCY>\r
+               <REF_DOC_NO>?</REF_DOC_NO>\r
+               <DOC_TYPE>?</DOC_TYPE>\r
+               <FIS_PERIOD>?</FIS_PERIOD>\r
+               <POST_KEY>?</POST_KEY>\r
+               <DB_CR_IND>?</DB_CR_IND>\r
+               <BUS_AREA>?</BUS_AREA>\r
+               <TAX_CODE>?</TAX_CODE>\r
+               <LC_AMOUNT>?</LC_AMOUNT>\r
+               <AMT_DOCCUR>?</AMT_DOCCUR>\r
+               <LC_TAX>?</LC_TAX>\r
+               <TX_DOC_CUR>?</TX_DOC_CUR>\r
+               <ITEM_TEXT>?</ITEM_TEXT>\r
+               <BRANCH>?</BRANCH>\r
+               <BLINE_DATE>?</BLINE_DATE>\r
+               <PMNTTRMS>?</PMNTTRMS>\r
+               <DSCT_DAYS1>?</DSCT_DAYS1>\r
+               <DSCT_DAYS2>?</DSCT_DAYS2>\r
+               <NETTERMS>?</NETTERMS>\r
+               <DSCT_PCT1>?</DSCT_PCT1>\r
+               <DSCT_PCT2>?</DSCT_PCT2>\r
+               <DISC_BASE>?</DISC_BASE>\r
+               <DSC_AMT_LC>?</DSC_AMT_LC>\r
+               <DSC_AMT_DC>?</DSC_AMT_DC>\r
+               <PYMT_METH>?</PYMT_METH>\r
+               <PMNT_BLOCK>?</PMNT_BLOCK>\r
+               <FIXEDTERMS>?</FIXEDTERMS>\r
+               <INV_REF>?</INV_REF>\r
+               <INV_YEAR>?</INV_YEAR>\r
+               <INV_ITEM>?</INV_ITEM>\r
+               <DUNN_BLOCK>?</DUNN_BLOCK>\r
+               <DUNN_KEY>?</DUNN_KEY>\r
+               <LAST_DUNN>?</LAST_DUNN>\r
+               <DUNN_LEVEL>?</DUNN_LEVEL>\r
+               <DUNN_AREA>?</DUNN_AREA>\r
+               <DOC_STATUS>?</DOC_STATUS>\r
+               <NXT_DOCTYP>?</NXT_DOCTYP>\r
+               <VAT_REG_NO>?</VAT_REG_NO>\r
+               <REASON_CDE>?</REASON_CDE>\r
+               <PMTMTHSUPL>?</PMTMTHSUPL>\r
+               <REF_KEY_1>?</REF_KEY_1>\r
+               <REF_KEY_2>?</REF_KEY_2>\r
+               <T_CURRENCY>?</T_CURRENCY>\r
+               <AMOUNT>?</AMOUNT>\r
+               <NET_AMOUNT>?</NET_AMOUNT>\r
+               <NAME>?</NAME>\r
+               <NAME_2>?</NAME_2>\r
+               <NAME_3>?</NAME_3>\r
+               <NAME_4>?</NAME_4>\r
+               <POSTL_CODE>?</POSTL_CODE>\r
+               <CITY>?</CITY>\r
+               <COUNTRY>?</COUNTRY>\r
+               <STREET>?</STREET>\r
+               <PO_BOX>?</PO_BOX>\r
+               <POBX_PCD>?</POBX_PCD>\r
+               <POBK_CURAC>?</POBK_CURAC>\r
+               <BANK_ACCT>?</BANK_ACCT>\r
+               <BANK_KEY>?</BANK_KEY>\r
+               <BANK_CTRY>?</BANK_CTRY>\r
+               <TAX_NO_1>?</TAX_NO_1>\r
+               <TAX_NO_2>?</TAX_NO_2>\r
+               <TAX>?</TAX>\r
+               <EQUAL_TAX>?</EQUAL_TAX>\r
+               <REGION>?</REGION>\r
+               <CTRL_KEY>?</CTRL_KEY>\r
+               <INSTR_KEY>?</INSTR_KEY>\r
+               <PAYEE_CODE>?</PAYEE_CODE>\r
+               <LANGU>?</LANGU>\r
+               <BILL_LIFE>?</BILL_LIFE>\r
+               <BE_TAXCODE>?</BE_TAXCODE>\r
+               <BILLTAX_LC>?</BILLTAX_LC>\r
+               <BILLTAX_FC>?</BILLTAX_FC>\r
+               <LC_COL_CHG>?</LC_COL_CHG>\r
+               <COLL_CHARG>?</COLL_CHARG>\r
+               <CHGS_TX_CD>?</CHGS_TX_CD>\r
+               <ISSUE_DATE>?</ISSUE_DATE>\r
+               <USAGEDATE>?</USAGEDATE>\r
+               <BILL_USAGE>?</BILL_USAGE>\r
+               <DOMICILE>?</DOMICILE>\r
+               <DRAWER>?</DRAWER>\r
+               <CTRBNK_LOC>?</CTRBNK_LOC>\r
+               <DRAW_CITY1>?</DRAW_CITY1>\r
+               <DRAWEE>?</DRAWEE>\r
+               <DRAW_CITY2>?</DRAW_CITY2>\r
+               <DISCT_DAYS>?</DISCT_DAYS>\r
+               <DISCT_RATE>?</DISCT_RATE>\r
+               <ACCEPTED>?</ACCEPTED>\r
+               <BILLSTATUS>?</BILLSTATUS>\r
+               <PRTEST_IND>?</PRTEST_IND>\r
+               <BE_DEMAND>?</BE_DEMAND>\r
+               <OBJ_TYPE>?</OBJ_TYPE>\r
+               <REF_DOC>?</REF_DOC>\r
+               <REF_ORG_UN>?</REF_ORG_UN>\r
+               <REVERSAL_DOC>?</REVERSAL_DOC>\r
+               <SP_GL_TYPE>?</SP_GL_TYPE>\r
+               <NEG_POSTNG>?</NEG_POSTNG>\r
+               <REF_DOC_NO_LONG>?</REF_DOC_NO_LONG>\r
+               <BILL_DOC>?</BILL_DOC>\r
+            </item>\r
+         </IT_DET>\r
+         <I_COMCODE>?</I_COMCODE>\r
+         <I_CUSID>?</I_CUSID>\r
+         <!--Optional:-->\r
+         <I_DOCDATE>?</I_DOCDATE>\r
+      </urn:ZFM_CP_PAYAGING_DK>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:sap-com:document:sap:rfc:functions:ZFM_CP_PAYAGING_DK:ZFM_CP_PAYAGING_DKRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

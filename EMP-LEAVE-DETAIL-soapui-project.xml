@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9260a0a2-f1e7-44bf-aa00-34c74bfb57eb" activeEnvironment="Default" name="EMP LEAVE DETAIL" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="fb1f6639-592a-4ce6-a7ed-ec2a0c074666" wsaVersion="NONE" name="SI_SEN_LDETBinding" type="wsdl" bindingName="{http://Employee_sk_Sen_786.com}SI_SEN_LDETBinding" soapVersion="1_1" anonymous="optional" definition="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/0426b4edb1d536a4932733741612f202" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/0426b4edb1d536a4932733741612f202"><con:part><con:url>http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/0426b4edb1d536a4932733741612f202</con:url><con:content><![CDATA[<wsdl:definitions name="SI_SEN_LDET" targetNamespace="http://Employee_sk_Sen_786.com" xmlns:rfc="urn:sap-com:document:sap:rfc:functions" xmlns:p1="http://Employee_sk_Sen_786.com" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation/>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="OP_SI_SEN_LDET"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:sap-com:document:sap:rfc:functions">
+      <xsd:element name="ZFM_LDET_SEN">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="E_NO">
+              <xsd:annotation>
+                <xsd:documentation>PERSONNEL NUMBER</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="8"/>
+                  <xsd:pattern value="\d+"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="IT_LEAVE_DATA" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>HR Time Record: Absences Infotype (2001)</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="BAPIP2001L" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZFM_LDET_SEN.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="IT_LEAVE_DATA" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>HR Time Record: Absences Infotype (2001)</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="BAPIP2001L" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="time">
+        <xsd:union memberTypes="xsd:time genericTime"/>
+      </xsd:simpleType>
+      <xsd:simpleType name="date">
+        <xsd:union memberTypes="xsd:date genericDate"/>
+      </xsd:simpleType>
+      <xsd:simpleType name="genericDate">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="....-..-.."/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="genericTime">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="..:..:.."/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="BAPIP2001L">
+        <xsd:annotation>
+          <xsd:documentation>HR Time Record: Absences Infotype (2001)</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="EMPLOYEENO" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Personnel Number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="8"/>
+                <xsd:pattern value="\d+"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="SUBTYPE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Subtype</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="OBJECTID" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Object Identification</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LOCKINDIC" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Lock Indicator for HR Master Data Record</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="VALIDEND" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>End Date</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="VALIDBEGIN" type="date" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Start Date</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="RECORDNR" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Number of Infotype Record With Same Key</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3"/>
+                <xsd:pattern value="\d+"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="START" type="time" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Start Time</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="END" type="time" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>End Time</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ABSENCETYPE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Attendance or Absence Type</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="NAMEOFABSENCETYPE" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Text for Attendance/Absence Type</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="25"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ABSENCEDAYS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Attendance and Absence Days</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="6"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ABSENCEHOURS" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Absence hours</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="7"/>
+                <xsd:fractionDigits value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="rfc.ZFM_LDET_SEN.Input">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_LDET_SEN"/>
+  </wsdl:message>
+  <wsdl:message name="rfc.ZFM_LDET_SEN.Output">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_LDET_SEN.Response"/>
+  </wsdl:message>
+  <wsdl:portType name="SI_SEN_LDET">
+    <wsdl:documentation/>
+    <wsdl:operation name="SI_SEN_LDET">
+      <wsdl:documentation/>
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_SEN_LDET"/>
+      </wsp:Policy>
+      <wsdl:input message="p1:rfc.ZFM_LDET_SEN.Input"/>
+      <wsdl:output message="p1:rfc.ZFM_LDET_SEN.Output"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_SEN_LDETBinding" type="p1:SI_SEN_LDET">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <wsdl:operation name="SI_SEN_LDET">
+      <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_SEN_LDETService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_SEN_LDETBinding">
+      <soap:address location="http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_LDET&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_LDET&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_SEN_LDETBinding">
+      <soap:address location="https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_LDET&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_LDET&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_LDET&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_LDET&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:endpoint>https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_LDET&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_LDET&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint></con:endpoints><con:operation id="a81a86e0-6020-4b0a-8f38-dd91deb62eb3" isOneWay="false" action="http://sap.com/xi/WebService/soap1.1" name="SI_SEN_LDET" bindingOperationName="SI_SEN_LDET" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4a1755ea-7903-461d-bb13-cf5c7ffd39e2" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_LDET&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_LDET&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:ZFM_LDET_SEN>\r
+         <!--You may enter the following 2 items in any order-->\r
+         <E_NO>3</E_NO>\r
+         <!--Optional:-->\r
+         <IT_LEAVE_DATA>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+             
+            </item>\r
+         </IT_LEAVE_DATA>\r
+      </urn:ZFM_LDET_SEN>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>pouser@2</con:username><con:password>Tech@2022</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sap.com/xi/WebService/soap1.1"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="4e92b403-96dd-4f36-9f6d-56bd8bd9add3" activeEnvironment="Default" name="DELIVERY DETAILS" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="875f2a07-39fe-4309-bdd3-91fa3959e7fc" wsaVersion="NONE" name="ZFM_CUSTDELIV_DET_SEN" type="wsdl" bindingName="{urn:sap-com:document:sap:rfc:functions}ZFM_CUSTDELIV_DET_SEN" soapVersion="1_1" anonymous="optional" definition="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_custdeliv_det_sen/100/zfm_custdeliv_det_sen/zfm_custdeliv_det_sen?sap-client=100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://KTINDHNA02.kaartech.com:8001/sap/bc/srt/rfc/sap/zfm_custdeliv_det_sen/100/zfm_custdeliv_det_sen/zfm_custdeliv_det_sen</con:endpoint></con:endpoints><con:operation id="9a27773c-0222-4829-8323-f335d4648b94" isOneWay="false" action="urn:sap-com:document:sap:rfc:functions:ZFM_CUSTDELIV_DET_SEN:ZFM_CUSTDELIV_DET_SENRequest" name="ZFM_CUSTDELIV_DET_SEN" bindingOperationName="ZFM_CUSTDELIV_DET_SEN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c27035eb-87df-4c10-adf0-e5e4894ed3af" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://KTINDHNA02.kaartech.com:8001/sap/bc/srt/rfc/sap/zfm_custdeliv_det_sen/100/zfm_custdeliv_det_sen/zfm_custdeliv_det_sen</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:ZFM_CUSTDELIV_DET_SEN>\r
+         <DELIVERYDETAIL>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+               <MANDT>?</MANDT>\r
+               <VBELN>?</VBELN>\r
+               <POSNR>?</POSNR>\r
+               <PSTYV>?</PSTYV>\r
+               <ERNAM>?</ERNAM>\r
+               <ERZET>?</ERZET>\r
+               <ERDAT>?</ERDAT>\r
+               <MATNR>?</MATNR>\r
+               <MATWA>?</MATWA>\r
+               <MATKL>?</MATKL>\r
+               <WERKS>?</WERKS>\r
+               <LGORT>?</LGORT>\r
+               <CHARG>?</CHARG>\r
+               <LICHN>?</LICHN>\r
+               <KDMAT>?</KDMAT>\r
+               <PRODH>?</PRODH>\r
+               <LFIMG>?</LFIMG>\r
+               <MEINS>?</MEINS>\r
+               <VRKME>?</VRKME>\r
+               <UMVKZ>?</UMVKZ>\r
+               <UMVKN>?</UMVKN>\r
+               <NTGEW>?</NTGEW>\r
+               <BRGEW>?</BRGEW>\r
+               <GEWEI>?</GEWEI>\r
+               <VOLUM>?</VOLUM>\r
+               <VOLEH>?</VOLEH>\r
+               <KZTLF>?</KZTLF>\r
+               <UEBTK>?</UEBTK>\r
+               <UEBTO>?</UEBTO>\r
+               <UNTTO>?</UNTTO>\r
+               <CHSPL>?</CHSPL>\r
+               <FAKSP>?</FAKSP>\r
+               <MBDAT>?</MBDAT>\r
+               <LGMNG>?</LGMNG>\r
+               <ARKTX>?</ARKTX>\r
+               <LGPBE>?</LGPBE>\r
+               <VBELV>?</VBELV>\r
+               <POSNV>?</POSNV>\r
+               <VBTYV>?</VBTYV>\r
+               <VGSYS>?</VGSYS>\r
+               <VGBEL>?</VGBEL>\r
+               <VGPOS>?</VGPOS>\r
+               <UPFLU>?</UPFLU>\r
+               <UEPOS>?</UEPOS>\r
+               <FKREL>?</FKREL>\r
+               <LADGR>?</LADGR>\r
+               <TRAGR>?</TRAGR>\r
+               <KOMKZ>?</KOMKZ>\r
+               <LGNUM>?</LGNUM>\r
+               <LISPL>?</LISPL>\r
+               <LGTYP>?</LGTYP>\r
+               <LGPLA>?</LGPLA>\r
+               <BWTEX>?</BWTEX>\r
+               <BWART>?</BWART>\r
+               <BWLVS>?</BWLVS>\r
+               <KZDLG>?</KZDLG>\r
+               <BDART>?</BDART>\r
+               <PLART>?</PLART>\r
+               <MTART>?</MTART>\r
+               <XCHPF>?</XCHPF>\r
+               <XCHAR>?</XCHAR>\r
+               <VGREF>?</VGREF>\r
+               <POSAR>?</POSAR>\r
+               <BWTAR>?</BWTAR>\r
+               <SUMBD>?</SUMBD>\r
+               <MTVFP>?</MTVFP>\r
+               <EANNR>?</EANNR>\r
+               <GSBER>?</GSBER>\r
+               <VKBUR>?</VKBUR>\r
+               <VKGRP>?</VKGRP>\r
+               <VTWEG>?</VTWEG>\r
+               <SPART>?</SPART>\r
+               <GRKOR>?</GRKOR>\r
+               <FMENG>?</FMENG>\r
+               <ANTLF>?</ANTLF>\r
+               <VBEAF>?</VBEAF>\r
+               <VBEAV>?</VBEAV>\r
+               <STAFO>?</STAFO>\r
+               <WAVWR>?</WAVWR>\r
+               <KZWI1>?</KZWI1>\r
+               <KZWI2>?</KZWI2>\r
+               <KZWI3>?</KZWI3>\r
+               <KZWI4>?</KZWI4>\r
+               <KZWI5>?</KZWI5>\r
+               <KZWI6>?</KZWI6>\r
+               <SOBKZ>?</SOBKZ>\r
+               <AEDAT>?</AEDAT>\r
+               <EAN11>?</EAN11>\r
+               <KVGR1>?</KVGR1>\r
+               <KVGR2>?</KVGR2>\r
+               <KVGR3>?</KVGR3>\r
+               <KVGR4>?</KVGR4>\r
+               <KVGR5>?</KVGR5>\r
+               <MVGR1>?</MVGR1>\r
+               <MVGR2>?</MVGR2>\r
+               <MVGR3>?</MVGR3>\r
+               <MVGR4>?</MVGR4>\r
+               <MVGR5>?</MVGR5>\r
+               <VPZUO>?</VPZUO>\r
+               <VGTYP>?</VGTYP>\r
+               <RFVGTYP>?</RFVGTYP>\r
+               <KOSTL>?</KOSTL>\r
+               <KOKRS>?</KOKRS>\r
+               <PAOBJNR>?</PAOBJNR>\r
+               <PRCTR>?</PRCTR>\r
+               <PS_PSP_PNR>?</PS_PSP_PNR>\r
+               <AUFNR>?</AUFNR>\r
+               <POSNR_PP>?</POSNR_PP>\r
+               <KDAUF>?</KDAUF>\r
+               <KDPOS>?</KDPOS>\r
+               <VPMAT>?</VPMAT>\r
+               <VPWRK>?</VPWRK>\r
+               <PRBME>?</PRBME>\r
+               <UMREF>?</UMREF>\r
+               <KNTTP>?</KNTTP>\r
+               <KZVBR>?</KZVBR>\r
+               <FIPOS>?</FIPOS>\r
+               <FISTL>?</FISTL>\r
+               <GEBER>?</GEBER>\r
+               <PCKPF>?</PCKPF>\r
+               <BEDAR_LF>?</BEDAR_LF>\r
+               <CMPNT>?</CMPNT>\r
+               <KCMENG>?</KCMENG>\r
+               <KCBRGEW>?</KCBRGEW>\r
+               <KCNTGEW>?</KCNTGEW>\r
+               <KCVOLUM>?</KCVOLUM>\r
+               <UECHA>?</UECHA>\r
+               <CUOBJ>?</CUOBJ>\r
+               <CUOBJ_CH>?</CUOBJ_CH>\r
+               <ANZSN>?</ANZSN>\r
+               <SERAIL>?</SERAIL>\r
+               <KCGEWEI>?</KCGEWEI>\r
+               <KCVOLEH>?</KCVOLEH>\r
+               <SERNR>?</SERNR>\r
+               <ABRLI>?</ABRLI>\r
+               <ABART>?</ABART>\r
+               <ABRVW>?</ABRVW>\r
+               <QPLOS>?</QPLOS>\r
+               <QTLOS>?</QTLOS>\r
+               <NACHL>?</NACHL>\r
+               <MAGRV>?</MAGRV>\r
+               <OBJKO>?</OBJKO>\r
+               <OBJPO>?</OBJPO>\r
+               <AESKD>?</AESKD>\r
+               <SHKZG>?</SHKZG>\r
+               <PROSA>?</PROSA>\r
+               <UEPVW>?</UEPVW>\r
+               <EMPST>?</EMPST>\r
+               <ABTNR>?</ABTNR>\r
+               <KOQUI>?</KOQUI>\r
+               <STADAT>?</STADAT>\r
+               <AKTNR>?</AKTNR>\r
+               <KNUMH_CH>?</KNUMH_CH>\r
+               <PREFE>?</PREFE>\r
+               <EXART>?</EXART>\r
+               <CLINT>?</CLINT>\r
+               <CHMVS>?</CHMVS>\r
+               <ABELN>?</ABELN>\r
+               <ABELP>?</ABELP>\r
+               <LFIMG_FLO>?</LFIMG_FLO>\r
+               <LGMNG_FLO>?</LGMNG_FLO>\r
+               <KCMENG_FLO>?</KCMENG_FLO>\r
+               <KZUMW>?</KZUMW>\r
+               <KMPMG>?</KMPMG>\r
+               <AUREL>?</AUREL>\r
+               <KPEIN>?</KPEIN>\r
+               <KMEIN>?</KMEIN>\r
+               <NETPR>?</NETPR>\r
+               <NETWR>?</NETWR>\r
+               <KOWRR>?</KOWRR>\r
+               <KZBEW>?</KZBEW>\r
+               <MFRGR>?</MFRGR>\r
+               <CHHPV>?</CHHPV>\r
+               <ABFOR>?</ABFOR>\r
+               <ABGES>?</ABGES>\r
+               <MBUHR>?</MBUHR>\r
+               <WKTNR>?</WKTNR>\r
+               <WKTPS>?</WKTPS>\r
+               <J_1BCFOP>?</J_1BCFOP>\r
+               <J_1BTAXLW1>?</J_1BTAXLW1>\r
+               <J_1BTAXLW2>?</J_1BTAXLW2>\r
+               <J_1BTXSDC>?</J_1BTXSDC>\r
+               <SITUA>?</SITUA>\r
+               <RSNUM>?</RSNUM>\r
+               <RSPOS>?</RSPOS>\r
+               <RSART>?</RSART>\r
+               <KANNR>?</KANNR>\r
+               <KZFME>?</KZFME>\r
+               <PROFL>?</PROFL>\r
+               <KCMENGVME>?</KCMENGVME>\r
+               <KCMENGVMEF>?</KCMENGVMEF>\r
+               <KZBWS>?</KZBWS>\r
+               <PSPNR>?</PSPNR>\r
+               <EPRIO>?</EPRIO>\r
+               <RULES>?</RULES>\r
+               <KZBEF>?</KZBEF>\r
+               <MPROF>?</MPROF>\r
+               <EMATN>?</EMATN>\r
+               <LGBZO>?</LGBZO>\r
+               <HANDLE>?</HANDLE>\r
+               <VERURPOS>?</VERURPOS>\r
+               <LIFEXPOS>?</LIFEXPOS>\r
+               <NOATP>?</NOATP>\r
+               <NOPCK>?</NOPCK>\r
+               <RBLVS>?</RBLVS>\r
+               <BERID>?</BERID>\r
+               <BESTQ>?</BESTQ>\r
+               <UMBSQ>?</UMBSQ>\r
+               <UMMAT>?</UMMAT>\r
+               <UMWRK>?</UMWRK>\r
+               <UMLGO>?</UMLGO>\r
+               <UMCHA>?</UMCHA>\r
+               <UMBAR>?</UMBAR>\r
+               <UMSOK>?</UMSOK>\r
+               <SONUM>?</SONUM>\r
+               <USONU>?</USONU>\r
+               <AKKUR>?</AKKUR>\r
+               <AKMNG>?</AKMNG>\r
+               <VKGRU>?</VKGRU>\r
+               <SHKZG_UM>?</SHKZG_UM>\r
+               <INSMK>?</INSMK>\r
+               <KZECH>?</KZECH>\r
+               <FLGWM>?</FLGWM>\r
+               <BERKZ>?</BERKZ>\r
+               <HUPOS>?</HUPOS>\r
+               <NOWAB>?</NOWAB>\r
+               <KONTO>?</KONTO>\r
+               <KZEAR>?</KZEAR>\r
+               <HSDAT>?</HSDAT>\r
+               <VFDAT>?</VFDAT>\r
+               <LFGJA>?</LFGJA>\r
+               <LFBNR>?</LFBNR>\r
+               <LFPOS>?</LFPOS>\r
+               <GRUND>?</GRUND>\r
+               <FOBWA>?</FOBWA>\r
+               <DLVTP>?</DLVTP>\r
+               <EXBWR>?</EXBWR>\r
+               <BPMNG>?</BPMNG>\r
+               <EXVKW>?</EXVKW>\r
+               <CMPRE_FLT>?</CMPRE_FLT>\r
+               <KZPOD>?</KZPOD>\r
+               <LFDEZ>?</LFDEZ>\r
+               <UMREV>?</UMREV>\r
+               <PODREL>?</PODREL>\r
+               <KZUML>?</KZUML>\r
+               <FKBER>?</FKBER>\r
+               <GRANT_NBR>?</GRANT_NBR>\r
+               <KZWSO>?</KZWSO>\r
+               <GMCONTROL>?</GMCONTROL>\r
+               <POSTING_CHANGE>?</POSTING_CHANGE>\r
+               <UM_PS_PSP_PNR>?</UM_PS_PSP_PNR>\r
+               <PRE_VL_ETENS>?</PRE_VL_ETENS>\r
+               <SPE_GEN_ELIKZ>?</SPE_GEN_ELIKZ>\r
+               <SPE_SCRAP_IND>?</SPE_SCRAP_IND>\r
+               <SPE_AUTH_NUMBER>?</SPE_AUTH_NUMBER>\r
+               <SPE_INSPOUT_GUID>cid:1306185829007</SPE_INSPOUT_GUID>\r
+               <SPE_FOLLOW_UP>?</SPE_FOLLOW_UP>\r
+               <SPE_EXP_DATE_EXT>?</SPE_EXP_DATE_EXT>\r
+               <SPE_EXP_DATE_INT>?</SPE_EXP_DATE_INT>\r
+               <SPE_AUTH_COMPLET>?</SPE_AUTH_COMPLET>\r
+               <ORMNG>?</ORMNG>\r
+               <SPE_ATP_TMSTMP>?</SPE_ATP_TMSTMP>\r
+               <SPE_ORIG_SYS>?</SPE_ORIG_SYS>\r
+               <SPE_LIEFFZ>?</SPE_LIEFFZ>\r
+               <SPE_IMWRK>?</SPE_IMWRK>\r
+               <SPE_LIFEXPOS2>?</SPE_LIFEXPOS2>\r
+               <SPE_EXCEPT_CODE>?</SPE_EXCEPT_CODE>\r
+               <SPE_KEEP_QTY>?</SPE_KEEP_QTY>\r
+               <SPE_ALTERNATE>?</SPE_ALTERNATE>\r
+               <SPE_MAT_SUBST>?</SPE_MAT_SUBST>\r
+               <SPE_STRUC>?</SPE_STRUC>\r
+               <SPE_EXP_DATE_EXT_B>?</SPE_EXP_DATE_EXT_B>\r
+               <STK_SEGMENT>?</STK_SEGMENT>\r
+               <REQ_SEGMENT>?</REQ_SEGMENT>\r
+               <MATNR_LONG>?</MATNR_LONG>\r
+               <MATWA_LONG>?</MATWA_LONG>\r
+               <VPMAT_LONG>?</VPMAT_LONG>\r
+               <EMATN_LONG>?</EMATN_LONG>\r
+               <UMMAT_LONG>?</UMMAT_LONG>\r
+               <VBTYV_LONG>?</VBTYV_LONG>\r
+               <VGTYP_LONG>?</VGTYP_LONG>\r
+               <RFVGTYP_LONG>?</RFVGTYP_LONG>\r
+            </item>\r
+         </DELIVERYDETAIL>\r
+         <DOCID>?</DOCID>\r
+      </urn:ZFM_CUSTDELIV_DET_SEN>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:sap-com:document:sap:rfc:functions:ZFM_CUSTDELIV_DET_SEN:ZFM_CUSTDELIV_DET_SENRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="ab0c09ca-90f6-4a7c-a06b-20ac91a0a889" wsaVersion="NONE" name="ZFM_CUSTDELIV_DET_SEN_soap12" type="wsdl" bindingName="{urn:sap-com:document:sap:rfc:functions}ZFM_CUSTDELIV_DET_SEN_soap12" soapVersion="1_2" anonymous="optional" definition="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_custdeliv_det_sen/100/zfm_custdeliv_det_sen/zfm_custdeliv_det_sen?sap-client=100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_custdeliv_det_sen/100/zfm_custdeliv_det_sen/zfm_custdeliv_det_sen?sap-client=100"><con:part><con:url>http://KTINDHNA02.kaartech.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zfm_custdeliv_det_sen/100/zfm_custdeliv_det_sen/zfm_custdeliv_det_sen?sap-client=100</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:sap-com:document:sap:rfc:functions" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <wsdl:documentation>
+    <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl"/>
+  </wsdl:documentation>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="BN__ZFM_CUSTDELIV_DET_SEN">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization wsp:Optional="true" xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" wsp:Optional="true" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BN__ZFM_CUSTDELIV_DET_SEN_soap12">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization wsp:Optional="true" xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" wsp:Optional="true" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/"/>
+        <wsaw:UsingAddressing wsp:Optional="true" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsp:All>
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication/>
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15/>
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict/>
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="IF__ZFM_CUSTDELIV_DET_SEN">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+          <sapsession:enableSession>false</sapsession:enableSession>
+        </sapsession:Session>
+        <sapcentraladmin:CentralAdministration wsp:Optional="true" xmlns:sapcentraladmin="http://www.sap.com/webas/700/soap/features/CentralAdministration/">
+          <sapcentraladmin:BusinessApplicationID>FD51D02D79A11EED92D8367980F05415</sapcentraladmin:BusinessApplicationID>
+        </sapcentraladmin:CentralAdministration>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZFM_CUSTDELIV_DET_SEN">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <xsd:simpleType name="byte16">
+        <xsd:restriction base="xsd:base64Binary">
+          <xsd:maxLength value="16"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char12">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="12"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char13">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="13"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char14">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="14"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char15">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="15"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char16">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="16"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char17">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="17"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char18">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="18"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char2">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char20">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="20"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char22">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="22"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char25">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="25"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char35">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="35"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char4">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char40">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="40"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char6">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="6"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char8">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="8"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char9">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="9"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="clnt3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="curr11.2">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="11"/>
+          <xsd:fractionDigits value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="curr13.2">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="13"/>
+          <xsd:fractionDigits value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="curr15.2">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="15"/>
+          <xsd:fractionDigits value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="date10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10"/>
+          <xsd:pattern value="\d\d\d\d-\d\d-\d\d"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal1.0">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="1"/>
+          <xsd:fractionDigits value="0"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal15.0">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="15"/>
+          <xsd:fractionDigits value="0"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal3.1">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="3"/>
+          <xsd:fractionDigits value="1"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal5.0">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="5"/>
+          <xsd:fractionDigits value="0"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal5.2">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="5"/>
+          <xsd:fractionDigits value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal9.5">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="9"/>
+          <xsd:fractionDigits value="5"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric12">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="12"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric18">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="18"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric4">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric5">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="5"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric6">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="6"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric8">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="8"/>
+          <xsd:pattern value="\d*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="quantum13.3">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="13"/>
+          <xsd:fractionDigits value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="quantum15.3">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="15"/>
+          <xsd:fractionDigits value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="time">
+        <xsd:restriction base="xsd:time">
+          <xsd:pattern value="[0-9]{2}:[0-9]{2}:[0-9]{2}"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="unit3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="BAPIDLVITEM">
+        <xsd:sequence>
+          <xsd:element name="MANDT" type="tns:clnt3"/>
+          <xsd:element name="VBELN" type="tns:char10"/>
+          <xsd:element name="POSNR" type="tns:numeric6"/>
+          <xsd:element name="PSTYV" type="tns:char4"/>
+          <xsd:element name="ERNAM" type="tns:char12"/>
+          <xsd:element name="ERZET" type="tns:time"/>
+          <xsd:element name="ERDAT" type="tns:date10"/>
+          <xsd:element name="MATNR" type="tns:char18"/>
+          <xsd:element name="MATWA" type="tns:char18"/>
+          <xsd:element name="MATKL" type="tns:char9"/>
+          <xsd:element name="WERKS" type="tns:char4"/>
+          <xsd:element name="LGORT" type="tns:char4"/>
+          <xsd:element name="CHARG" type="tns:char10"/>
+          <xsd:element name="LICHN" type="tns:char15"/>
+          <xsd:element name="KDMAT" type="tns:char35"/>
+          <xsd:element name="PRODH" type="tns:char18"/>
+          <xsd:element name="LFIMG" type="tns:quantum13.3"/>
+          <xsd:element name="MEINS" type="tns:unit3"/>
+          <xsd:element name="VRKME" type="tns:unit3"/>
+          <xsd:element name="UMVKZ" type="tns:decimal5.0"/>
+          <xsd:element name="UMVKN" type="tns:decimal5.0"/>
+          <xsd:element name="NTGEW" type="tns:quantum15.3"/>
+          <xsd:element name="BRGEW" type="tns:quantum15.3"/>
+          <xsd:element name="GEWEI" type="tns:unit3"/>
+          <xsd:element name="VOLUM" type="tns:quantum15.3"/>
+          <xsd:element name="VOLEH" type="tns:unit3"/>
+          <xsd:element name="KZTLF" type="tns:char1"/>
+          <xsd:element name="UEBTK" type="tns:char1"/>
+          <xsd:element name="UEBTO" type="tns:decimal3.1"/>
+          <xsd:element name="UNTTO" type="tns:decimal3.1"/>
+          <xsd:element name="CHSPL" type="tns:char1"/>
+          <xsd:element name="FAKSP" type="tns:char2"/>
+          <xsd:element name="MBDAT" type="tns:date10"/>
+          <xsd:element name="LGMNG" type="tns:quantum13.3"/>
+          <xsd:element name="ARKTX" type="tns:char40"/>
+          <xsd:element name="LGPBE" type="tns:char10"/>
+          <xsd:element name="VBELV" type="tns:char10"/>
+          <xsd:element name="POSNV" type="tns:numeric6"/>
+          <xsd:element name="VBTYV" type="tns:char1"/>
+          <xsd:element name="VGSYS" type="tns:char10"/>
+          <xsd:element name="VGBEL" type="tns:char10"/>
+          <xsd:element name="VGPOS" type="tns:numeric6"/>
+          <xsd:element name="UPFLU" type="tns:char1"/>
+          <xsd:element name="UEPOS" type="tns:numeric6"/>
+          <xsd:element name="FKREL" type="tns:char1"/>
+          <xsd:element name="LADGR" type="tns:char4"/>
+          <xsd:element name="TRAGR" type="tns:char4"/>
+          <xsd:element name="KOMKZ" type="tns:char1"/>
+          <xsd:element name="LGNUM" type="tns:char3"/>
+          <xsd:element name="LISPL" type="tns:char1"/>
+          <xsd:element name="LGTYP" type="tns:char3"/>
+          <xsd:element name="LGPLA" type="tns:char10"/>
+          <xsd:element name="BWTEX" type="tns:char1"/>
+          <xsd:element name="BWART" type="tns:char3"/>
+          <xsd:element name="BWLVS" type="tns:numeric3"/>
+          <xsd:element name="KZDLG" type="tns:char1"/>
+          <xsd:element name="BDART" type="tns:char2"/>
+          <xsd:element name="PLART" type="tns:char1"/>
+          <xsd:element name="MTART" type="tns:char4"/>
+          <xsd:element name="XCHPF" type="tns:char1"/>
+          <xsd:element name="XCHAR" type="tns:char1"/>
+          <xsd:element name="VGREF" type="tns:char1"/>
+          <xsd:element name="POSAR" type="tns:char1"/>
+          <xsd:element name="BWTAR" type="tns:char10"/>
+          <xsd:element name="SUMBD" type="tns:char1"/>
+          <xsd:element name="MTVFP" type="tns:char2"/>
+          <xsd:element name="EANNR" type="tns:char13"/>
+          <xsd:element name="GSBER" type="tns:char4"/>
+          <xsd:element name="VKBUR" type="tns:char4"/>
+          <xsd:element name="VKGRP" type="tns:char3"/>
+          <xsd:element name="VTWEG" type="tns:char2"/>
+          <xsd:element name="SPART" type="tns:char2"/>
+          <xsd:element name="GRKOR" type="tns:numeric3"/>
+          <xsd:element name="FMENG" type="tns:char1"/>
+          <xsd:element name="ANTLF" type="tns:decimal1.0"/>
+          <xsd:element name="VBEAF" type="tns:decimal5.2"/>
+          <xsd:element name="VBEAV" type="tns:decimal5.2"/>
+          <xsd:element name="STAFO" type="tns:char6"/>
+          <xsd:element name="WAVWR" type="tns:curr13.2"/>
+          <xsd:element name="KZWI1" type="tns:curr13.2"/>
+          <xsd:element name="KZWI2" type="tns:curr13.2"/>
+          <xsd:element name="KZWI3" type="tns:curr13.2"/>
+          <xsd:element name="KZWI4" type="tns:curr13.2"/>
+          <xsd:element name="KZWI5" type="tns:curr13.2"/>
+          <xsd:element name="KZWI6" type="tns:curr13.2"/>
+          <xsd:element name="SOBKZ" type="tns:char1"/>
+          <xsd:element name="AEDAT" type="tns:date10"/>
+          <xsd:element name="EAN11" type="tns:char18"/>
+          <xsd:element name="KVGR1" type="tns:char3"/>
+          <xsd:element name="KVGR2" type="tns:char3"/>
+          <xsd:element name="KVGR3" type="tns:char3"/>
+          <xsd:element name="KVGR4" type="tns:char3"/>
+          <xsd:element name="KVGR5" type="tns:char3"/>
+          <xsd:element name="MVGR1" type="tns:char3"/>
+          <xsd:element name="MVGR2" type="tns:char3"/>
+          <xsd:element name="MVGR3" type="tns:char3"/>
+          <xsd:element name="MVGR4" type="tns:char3"/>
+          <xsd:element name="MVGR5" type="tns:char3"/>
+          <xsd:element name="VPZUO" type="tns:char1"/>
+          <xsd:element name="VGTYP" type="tns:char1"/>
+          <xsd:element name="RFVGTYP" type="tns:char1"/>
+          <xsd:element name="KOSTL" type="tns:char10"/>
+          <xsd:element name="KOKRS" type="tns:char4"/>
+          <xsd:element name="PAOBJNR" type="tns:numeric10"/>
+          <xsd:element name="PRCTR" type="tns:char10"/>
+          <xsd:element name="PS_PSP_PNR" type="tns:numeric8"/>
+          <xsd:element name="AUFNR" type="tns:char12"/>
+          <xsd:element name="POSNR_PP" type="tns:numeric4"/>
+          <xsd:element name="KDAUF" type="tns:char10"/>
+          <xsd:element name="KDPOS" type="tns:numeric6"/>
+          <xsd:element name="VPMAT" type="tns:char18"/>
+          <xsd:element name="VPWRK" type="tns:char4"/>
+          <xsd:element name="PRBME" type="tns:unit3"/>
+          <xsd:element name="UMREF" type="xsd:float"/>
+          <xsd:element name="KNTTP" type="tns:char1"/>
+          <xsd:element name="KZVBR" type="tns:char1"/>
+          <xsd:element name="FIPOS" type="tns:char14"/>
+          <xsd:element name="FISTL" type="tns:char16"/>
+          <xsd:element name="GEBER" type="tns:char10"/>
+          <xsd:element name="PCKPF" type="tns:char1"/>
+          <xsd:element name="BEDAR_LF" type="tns:char3"/>
+          <xsd:element name="CMPNT" type="tns:char1"/>
+          <xsd:element name="KCMENG" type="tns:quantum15.3"/>
+          <xsd:element name="KCBRGEW" type="tns:quantum15.3"/>
+          <xsd:element name="KCNTGEW" type="tns:quantum15.3"/>
+          <xsd:element name="KCVOLUM" type="tns:quantum15.3"/>
+          <xsd:element name="UECHA" type="tns:numeric6"/>
+          <xsd:element name="CUOBJ" type="tns:numeric18"/>
+          <xsd:element name="CUOBJ_CH" type="tns:numeric18"/>
+          <xsd:element name="ANZSN" type="xsd:int"/>
+          <xsd:element name="SERAIL" type="tns:char4"/>
+          <xsd:element name="KCGEWEI" type="tns:unit3"/>
+          <xsd:element name="KCVOLEH" type="tns:unit3"/>
+          <xsd:element name="SERNR" type="tns:char8"/>
+          <xsd:element name="ABRLI" type="tns:numeric4"/>
+          <xsd:element name="ABART" type="tns:char1"/>
+          <xsd:element name="ABRVW" type="tns:char3"/>
+          <xsd:element name="QPLOS" type="tns:numeric12"/>
+          <xsd:element name="QTLOS" type="tns:numeric6"/>
+          <xsd:element name="NACHL" type="tns:char1"/>
+          <xsd:element name="MAGRV" type="tns:char4"/>
+          <xsd:element name="OBJKO" type="tns:char22"/>
+          <xsd:element name="OBJPO" type="tns:char22"/>
+          <xsd:element name="AESKD" type="tns:char17"/>
+          <xsd:element name="SHKZG" type="tns:char1"/>
+          <xsd:element name="PROSA" type="tns:char1"/>
+          <xsd:element name="UEPVW" type="tns:char1"/>
+          <xsd:element name="EMPST" type="tns:char25"/>
+          <xsd:element name="ABTNR" type="tns:char4"/>
+          <xsd:element name="KOQUI" type="tns:char1"/>
+          <xsd:element name="STADAT" type="tns:date10"/>
+          <xsd:element name="AKTNR" type="tns:char10"/>
+          <xsd:element name="KNUMH_CH" type="tns:char10"/>
+          <xsd:element name="PREFE" type="tns:char1"/>
+          <xsd:element name="EXART" type="tns:char2"/>
+          <xsd:element name="CLINT" type="tns:numeric10"/>
+          <xsd:element name="CHMVS" type="tns:numeric3"/>
+          <xsd:element name="ABELN" type="tns:char10"/>
+          <xsd:element name="ABELP" type="tns:numeric5"/>
+          <xsd:element name="LFIMG_FLO" type="xsd:float"/>
+          <xsd:element name="LGMNG_FLO" type="xsd:float"/>
+          <xsd:element name="KCMENG_FLO" type="xsd:float"/>
+          <xsd:element name="KZUMW" type="tns:char1"/>
+          <xsd:element name="KMPMG" type="tns:quantum13.3"/>
+          <xsd:element name="AUREL" type="tns:char1"/>
+          <xsd:element name="KPEIN" type="tns:decimal5.0"/>
+          <xsd:element name="KMEIN" type="tns:unit3"/>
+          <xsd:element name="NETPR" type="tns:curr11.2"/>
+          <xsd:element name="NETWR" type="tns:curr15.2"/>
+          <xsd:element name="KOWRR" type="tns:char1"/>
+          <xsd:element name="KZBEW" type="tns:char1"/>
+          <xsd:element name="MFRGR" type="tns:char8"/>
+          <xsd:element name="CHHPV" type="tns:char1"/>
+          <xsd:element name="ABFOR" type="tns:char2"/>
+          <xsd:element name="ABGES" type="xsd:float"/>
+          <xsd:element name="MBUHR" type="tns:time"/>
+          <xsd:element name="WKTNR" type="tns:char10"/>
+          <xsd:element name="WKTPS" type="tns:numeric6"/>
+          <xsd:element name="J_1BCFOP" type="tns:char10"/>
+          <xsd:element name="J_1BTAXLW1" type="tns:char3"/>
+          <xsd:element name="J_1BTAXLW2" type="tns:char3"/>
+          <xsd:element name="J_1BTXSDC" type="tns:char2"/>
+          <xsd:element name="SITUA" type="tns:char2"/>
+          <xsd:element name="RSNUM" type="tns:numeric10"/>
+          <xsd:element name="RSPOS" type="tns:numeric4"/>
+          <xsd:element name="RSART" type="tns:char1"/>
+          <xsd:element name="KANNR" type="tns:char35"/>
+          <xsd:element name="KZFME" type="tns:char1"/>
+          <xsd:element name="PROFL" type="tns:char3"/>
+          <xsd:element name="KCMENGVME" type="tns:quantum15.3"/>
+          <xsd:element name="KCMENGVMEF" type="xsd:float"/>
+          <xsd:element name="KZBWS" type="tns:char1"/>
+          <xsd:element name="PSPNR" type="tns:numeric8"/>
+          <xsd:element name="EPRIO" type="tns:char4"/>
+          <xsd:element name="RULES" type="tns:char4"/>
+          <xsd:element name="KZBEF" type="tns:char1"/>
+          <xsd:element name="MPROF" type="tns:char4"/>
+          <xsd:element name="EMATN" type="tns:char18"/>
+          <xsd:element name="LGBZO" type="tns:char10"/>
+          <xsd:element name="HANDLE" type="tns:char22"/>
+          <xsd:element name="VERURPOS" type="tns:numeric6"/>
+          <xsd:element name="LIFEXPOS" type="tns:numeric6"/>
+          <xsd:element name="NOATP" type="tns:char1"/>
+          <xsd:element name="NOPCK" type="tns:char1"/>
+          <xsd:element name="RBLVS" type="tns:numeric3"/>
+          <xsd:element name="BERID" type="tns:char10"/>
+          <xsd:element name="BESTQ" type="tns:char1"/>
+          <xsd:element name="UMBSQ" type="tns:char1"/>
+          <xsd:element name="UMMAT" type="tns:char18"/>
+          <xsd:element name="UMWRK" type="tns:char4"/>
+          <xsd:element name="UMLGO" type="tns:char4"/>
+          <xsd:element name="UMCHA" type="tns:char10"/>
+          <xsd:element name="UMBAR" type="tns:char10"/>
+          <xsd:element name="UMSOK" type="tns:char1"/>
+          <xsd:element name="SONUM" type="tns:char16"/>
+          <xsd:element name="USONU" type="tns:char16"/>
+          <xsd:element name="AKKUR" type="tns:decimal9.5"/>
+          <xsd:element name="AKMNG" type="tns:char1"/>
+          <xsd:element name="VKGRU" type="tns:char3"/>
+          <xsd:element name="SHKZG_UM" type="tns:char1"/>
+          <xsd:element name="INSMK" type="tns:char1"/>
+          <xsd:element name="KZECH" type="tns:char1"/>
+          <xsd:element name="FLGWM" type="tns:char1"/>
+          <xsd:element name="BERKZ" type="tns:char1"/>
+          <xsd:element name="HUPOS" type="tns:char1"/>
+          <xsd:element name="NOWAB" type="tns:char1"/>
+          <xsd:element name="KONTO" type="tns:char10"/>
+          <xsd:element name="KZEAR" type="tns:char1"/>
+          <xsd:element name="HSDAT" type="tns:date10"/>
+          <xsd:element name="VFDAT" type="tns:date10"/>
+          <xsd:element name="LFGJA" type="tns:numeric4"/>
+          <xsd:element name="LFBNR" type="tns:char10"/>
+          <xsd:element name="LFPOS" type="tns:numeric4"/>
+          <xsd:element name="GRUND" type="tns:numeric4"/>
+          <xsd:element name="FOBWA" type="tns:char3"/>
+          <xsd:element name="DLVTP" type="tns:char2"/>
+          <xsd:element name="EXBWR" type="tns:curr13.2"/>
+          <xsd:element name="BPMNG" type="tns:quantum13.3"/>
+          <xsd:element name="EXVKW" type="tns:curr13.2"/>
+          <xsd:element name="CMPRE_FLT" type="xsd:float"/>
+          <xsd:element name="KZPOD" type="tns:char1"/>
+          <xsd:element name="LFDEZ" type="tns:char1"/>
+          <xsd:element name="UMREV" type="xsd:float"/>
+          <xsd:element name="PODREL" type="tns:char1"/>
+          <xsd:element name="KZUML" type="tns:char1"/>
+          <xsd:element name="FKBER" type="tns:char16"/>
+          <xsd:element name="GRANT_NBR" type="tns:char20"/>
+          <xsd:element name="KZWSO" type="tns:char1"/>
+          <xsd:element name="GMCONTROL" type="tns:char1"/>
+          <xsd:element name="POSTING_CHANGE" type="tns:char1"/>
+          <xsd:element name="UM_PS_PSP_PNR" type="tns:numeric8"/>
+          <xsd:element name="PRE_VL_ETENS" type="tns:numeric4"/>
+          <xsd:element name="SPE_GEN_ELIKZ" type="tns:char1"/>
+          <xsd:element name="SPE_SCRAP_IND" type="tns:char1"/>
+          <xsd:element name="SPE_AUTH_NUMBER" type="tns:char20"/>
+          <xsd:element name="SPE_INSPOUT_GUID" type="tns:byte16"/>
+          <xsd:element name="SPE_FOLLOW_UP" type="tns:char4"/>
+          <xsd:element name="SPE_EXP_DATE_EXT" type="tns:decimal15.0"/>
+          <xsd:element name="SPE_EXP_DATE_INT" type="tns:decimal15.0"/>
+          <xsd:element name="SPE_AUTH_COMPLET" type="tns:char1"/>
+          <xsd:element name="ORMNG" type="tns:quantum13.3"/>
+          <xsd:element name="SPE_ATP_TMSTMP" type="tns:decimal15.0"/>
+          <xsd:element name="SPE_ORIG_SYS" type="tns:char1"/>
+          <xsd:element name="SPE_LIEFFZ" type="tns:quantum15.3"/>
+          <xsd:element name="SPE_IMWRK" type="tns:char1"/>
+          <xsd:element name="SPE_LIFEXPOS2" type="tns:char35"/>
+          <xsd:element name="SPE_EXCEPT_CODE" type="tns:char4"/>
+          <xsd:element name="SPE_KEEP_QTY" type="tns:quantum13.3"/>
+          <xsd:element name="SPE_ALTERNATE" type="tns:char40"/>
+          <xsd:element name="SPE_MAT_SUBST" type="tns:char1"/>
+          <xsd:element name="SPE_STRUC" type="tns:numeric3"/>
+          <xsd:element name="SPE_EXP_DATE_EXT_B" type="tns:decimal15.0"/>
+          <xsd:element name="STK_SEGMENT" type="tns:char16"/>
+          <xsd:element name="REQ_SEGMENT" type="tns:char16"/>
+          <xsd:element name="MATNR_LONG" type="tns:char40"/>
+          <xsd:element name="MATWA_LONG" type="tns:char40"/>
+          <xsd:element name="VPMAT_LONG" type="tns:char40"/>
+          <xsd:element name="EMATN_LONG" type="tns:char40"/>
+          <xsd:element name="UMMAT_LONG" type="tns:char40"/>
+          <xsd:element name="VBTYV_LONG" type="tns:char4"/>
+          <xsd:element name="VGTYP_LONG" type="tns:char4"/>
+          <xsd:element name="RFVGTYP_LONG" type="tns:char4"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TABLE_OF_BAPIDLVITEM">
+        <xsd:sequence>
+          <xsd:element name="item" type="tns:BAPIDLVITEM" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ZFM_CUSTDELIV_DET_SEN">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="DELIVERYDETAIL" type="tns:TABLE_OF_BAPIDLVITEM"/>
+            <xsd:element name="DOCID" type="tns:char10"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZFM_CUSTDELIV_DET_SENResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="DELIVERYDETAIL" type="tns:TABLE_OF_BAPIDLVITEM"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ZFM_CUSTDELIV_DET_SEN">
+    <wsdl:part name="parameters" element="tns:ZFM_CUSTDELIV_DET_SEN"/>
+  </wsdl:message>
+  <wsdl:message name="ZFM_CUSTDELIV_DET_SENResponse">
+    <wsdl:part name="parameter" element="tns:ZFM_CUSTDELIV_DET_SENResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ZFM_CUSTDELIV_DET_SEN">
+    <wsdl:documentation>
+      <sapdoc:sapdoc xmlns:sapdoc="urn:sap:esi:documentation">
+        <sapdoc:docitem docURL="http://KTINDHNA02.kaartech.com:8000/sap/bc/esdt/docu/sd_text?sap-client=100&amp;sd_name=ZFM_CUSTDELIV_DET_SEN"/>
+      </sapdoc:sapdoc>
+    </wsdl:documentation>
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#IF__ZFM_CUSTDELIV_DET_SEN"/>
+    </wsp:Policy>
+    <wsdl:operation name="ZFM_CUSTDELIV_DET_SEN">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZFM_CUSTDELIV_DET_SEN"/>
+      </wsp:Policy>
+      <wsdl:input message="tns:ZFM_CUSTDELIV_DET_SEN"/>
+      <wsdl:output message="tns:ZFM_CUSTDELIV_DET_SENResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ZFM_CUSTDELIV_DET_SEN" type="tns:ZFM_CUSTDELIV_DET_SEN">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__ZFM_CUSTDELIV_DET_SEN"/>
+    </wsp:Policy>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ZFM_CUSTDELIV_DET_SEN">
+      <soap:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZFM_CUSTDELIV_DET_SEN:ZFM_CUSTDELIV_DET_SENRequest" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZFM_CUSTDELIV_DET_SEN_soap12" type="tns:ZFM_CUSTDELIV_DET_SEN">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__ZFM_CUSTDELIV_DET_SEN_soap12"/>
+    </wsp:Policy>
+    <wsoap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ZFM_CUSTDELIV_DET_SEN">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZFM_CUSTDELIV_DET_SEN:ZFM_CUSTDELIV_DET_SENRequest" style="document"/>
+      <wsdl:input>
+        <wsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZFM_CUSTDELIV_DET_SEN">
+    <wsdl:port name="ZFM_CUSTDELIV_DET_SEN" binding="tns:ZFM_CUSTDELIV_DET_SEN">
+      <soap:address location="https://KTINDHNA02.kaartech.com:8001/sap/bc/srt/rfc/sap/zfm_custdeliv_det_sen/100/zfm_custdeliv_det_sen/zfm_custdeliv_det_sen"/>
+    </wsdl:port>
+    <wsdl:port name="ZFM_CUSTDELIV_DET_SEN_soap12" binding="tns:ZFM_CUSTDELIV_DET_SEN_soap12">
+      <wsoap12:address location="https://KTINDHNA02.kaartech.com:8001/sap/bc/srt/rfc/sap/zfm_custdeliv_det_sen/100/zfm_custdeliv_det_sen/zfm_custdeliv_det_sen"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://KTINDHNA02.kaartech.com:8001/sap/bc/srt/rfc/sap/zfm_custdeliv_det_sen/100/zfm_custdeliv_det_sen/zfm_custdeliv_det_sen</con:endpoint></con:endpoints><con:operation id="89da3d4f-bde1-4c00-8e4b-dfe5e42b4d5a" isOneWay="false" action="urn:sap-com:document:sap:rfc:functions:ZFM_CUSTDELIV_DET_SEN:ZFM_CUSTDELIV_DET_SENRequest" name="ZFM_CUSTDELIV_DET_SEN" bindingOperationName="ZFM_CUSTDELIV_DET_SEN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0bcf1229-5379-43ce-91ed-8ec112970cf2" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://KTINDHNA02.kaartech.com:8001/sap/bc/srt/rfc/sap/zfm_custdeliv_det_sen/100/zfm_custdeliv_det_sen/zfm_custdeliv_det_sen</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <urn:ZFM_CUSTDELIV_DET_SEN>\r
+         <DELIVERYDETAIL>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+            
+            </item>\r
+         </DELIVERYDETAIL>\r
+         <DOCID>12</DOCID>\r
+      </urn:ZFM_CUSTDELIV_DET_SEN>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:username>ABAPER2</con:username><con:password>abap@123</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:sap-com:document:sap:rfc:functions/ZFM_CUSTDELIV_DET_SEN/ZFM_CUSTDELIV_DET_SENRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

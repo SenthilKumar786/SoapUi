@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="7168a97c-9057-4573-be9b-4f47d3027ac5" activeEnvironment="Default" name="EMP PAYSLIP DISPLAY" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="dc08ddd1-2ee7-4edd-ab15-7b8cf52d14e4" wsaVersion="NONE" name="SI_SEN_PSDISPBinding" type="wsdl" bindingName="{http://Employee_sk_Sen_786.com}SI_SEN_PSDISPBinding" soapVersion="1_1" anonymous="optional" definition="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/e8c9c07600cc321d914693373cbd3d6a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/e8c9c07600cc321d914693373cbd3d6a"><con:part><con:url>http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/e8c9c07600cc321d914693373cbd3d6a</con:url><con:content><![CDATA[<wsdl:definitions name="SI_SEN_PSDISP" targetNamespace="http://Employee_sk_Sen_786.com" xmlns:rfc="urn:sap-com:document:sap:rfc:functions" xmlns:p1="http://Employee_sk_Sen_786.com" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation/>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="OP_SI_SEN_PSDISP"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:sap-com:document:sap:rfc:functions">
+      <xsd:element name="ZFM_PSDISP_SEN">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="EMPLOYEENUMBER">
+              <xsd:annotation>
+                <xsd:documentation>Personnel Number</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="8"/>
+                  <xsd:pattern value="\d+"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="SEQUENCENUMBER">
+              <xsd:annotation>
+                <xsd:documentation>Sequence Number</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="5"/>
+                  <xsd:pattern value="\d+"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="PAYSLIP">
+              <xsd:annotation>
+                <xsd:documentation>Form information (see also PC408)</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="BAPI7004_PAYSLIP" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZFM_PSDISP_SEN.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="OUTPUT" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="PAYSLIP_PDF" type="xsd:base64Binary" minOccurs="0"/>
+            <xsd:element name="PAYSLIP">
+              <xsd:annotation>
+                <xsd:documentation>Form information (see also PC408)</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="item" type="BAPI7004_PAYSLIP" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="BAPI7004_PAYSLIP">
+        <xsd:annotation>
+          <xsd:documentation>Form information (see also PC408)</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="FORMAT_COL" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Tag column</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="TEXT_COL" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Text (length 132)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="132"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="rfc.ZFM_PSDISP_SEN.Input">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_PSDISP_SEN"/>
+  </wsdl:message>
+  <wsdl:message name="rfc.ZFM_PSDISP_SEN.Output">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_PSDISP_SEN.Response"/>
+  </wsdl:message>
+  <wsdl:portType name="SI_SEN_PSDISP">
+    <wsdl:documentation/>
+    <wsdl:operation name="SI_SEN_PSDISP">
+      <wsdl:documentation/>
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_SEN_PSDISP"/>
+      </wsp:Policy>
+      <wsdl:input message="p1:rfc.ZFM_PSDISP_SEN.Input"/>
+      <wsdl:output message="p1:rfc.ZFM_PSDISP_SEN.Output"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_SEN_PSDISPBinding" type="p1:SI_SEN_PSDISP">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <wsdl:operation name="SI_SEN_PSDISP">
+      <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_SEN_PSDISPService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_SEN_PSDISPBinding">
+      <soap:address location="http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_PSDISP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_PSDISP&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_SEN_PSDISPBinding">
+      <soap:address location="https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_PSDISP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_PSDISP&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_PSDISP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_PSDISP&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:endpoint>https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_PSDISP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_PSDISP&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint></con:endpoints><con:operation id="3d47b952-8f4f-4057-9a36-118e942a843e" isOneWay="false" action="http://sap.com/xi/WebService/soap1.1" name="SI_SEN_PSDISP" bindingOperationName="SI_SEN_PSDISP" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="72ca1ab6-bd2a-4ef7-ae9b-2a12bd6ddf04" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_PSDISP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_PSDISP&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:ZFM_PSDISP_SEN>\r
+         <!--You may enter the following 3 items in any order-->\r
+         <EMPLOYEENUMBER>5</EMPLOYEENUMBER>\r
+         <SEQUENCENUMBER>0001</SEQUENCENUMBER>\r
+         <PAYSLIP>\r
+            <!--Zero or more repetitions:-->\r
+            <item>\r
+               
+               <TEXT_COL>?</TEXT_COL>\r
+            </item>\r
+         </PAYSLIP>\r
+      </urn:ZFM_PSDISP_SEN>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>pouser@2</con:username><con:password>Tech@2022</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sap.com/xi/WebService/soap1.1"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

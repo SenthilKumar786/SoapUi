@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9bfd9adc-0ccc-4f6d-ad13-2bb1c0c4c956" activeEnvironment="Default" name="EMP LOGIN" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="1ed702ab-e4cc-4234-87b7-012b05ea81e4" wsaVersion="NONE" name="SI_SEN_LOGINEPBinding" type="wsdl" bindingName="{http://Employee_sk_Sen_786.com}SI_SEN_LOGINEPBinding" soapVersion="1_1" anonymous="optional" definition="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/55c69545b7ef31979521d0c5a1a59d77" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/55c69545b7ef31979521d0c5a1a59d77"><con:part><con:url>http://dxktpipo.kaarcloud.com:50000/dir/wsdl?p=ic/55c69545b7ef31979521d0c5a1a59d77</con:url><con:content><![CDATA[<wsdl:definitions name="SI_SEN_LOGINEP" targetNamespace="http://Employee_sk_Sen_786.com" xmlns:rfc="urn:sap-com:document:sap:rfc:functions" xmlns:p1="http://Employee_sk_Sen_786.com" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation/>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="OP_SI_SEN_LOGINEP"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:sap-com:document:sap:rfc:functions">
+      <xsd:element name="ZFM_LOGINEP_SEN">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="PASSWORD">
+              <xsd:annotation>
+                <xsd:documentation>Data Element Type CHAR Length 35</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="35"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="USERNAME">
+              <xsd:annotation>
+                <xsd:documentation>Personnel number</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="8"/>
+                  <xsd:pattern value="\d+"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZFM_LOGINEP_SEN.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="RETURN" type="xsd:string" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>RETURN PARAMETER</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="rfc.ZFM_LOGINEP_SEN.Input">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_LOGINEP_SEN"/>
+  </wsdl:message>
+  <wsdl:message name="rfc.ZFM_LOGINEP_SEN.Output">
+    <wsdl:documentation/>
+    <wsdl:part name="parameters" element="rfc:ZFM_LOGINEP_SEN.Response"/>
+  </wsdl:message>
+  <wsdl:portType name="SI_SEN_LOGINEP">
+    <wsdl:documentation/>
+    <wsdl:operation name="SI_SEN_LOGINEP">
+      <wsdl:documentation/>
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_SEN_LOGINEP"/>
+      </wsp:Policy>
+      <wsdl:input message="p1:rfc.ZFM_LOGINEP_SEN.Input"/>
+      <wsdl:output message="p1:rfc.ZFM_LOGINEP_SEN.Output"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_SEN_LOGINEPBinding" type="p1:SI_SEN_LOGINEP">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <wsdl:operation name="SI_SEN_LOGINEP">
+      <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_SEN_LOGINEPService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_SEN_LOGINEPBinding">
+      <soap:address location="http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_LOGINEP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_LOGINEP&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_SEN_LOGINEPBinding">
+      <soap:address location="https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_LOGINEP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_LOGINEP&amp;interfaceNamespace=http%3A%2F%2FEmployee_sk_Sen_786.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_LOGINEP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_LOGINEP&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:endpoint>https://dxktpipo.kaarcloud.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_LOGINEP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_LOGINEP&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint></con:endpoints><con:operation id="68090980-798b-4cb7-b41e-6b8bd2842b3c" isOneWay="false" action="http://sap.com/xi/WebService/soap1.1" name="SI_SEN_LOGINEP" bindingOperationName="SI_SEN_LOGINEP" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="26b5bb5f-b0e8-4949-afc0-aa89cadb2661" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dxktpipo.kaarcloud.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SK_SEN_LOGINEP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SEN_LOGINEP&amp;interfaceNamespace=http://Employee_sk_Sen_786.com</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:ZFM_LOGINEP_SEN>\r
+         <!--You may enter the following 2 items in any order-->\r
+         <PASSWORD>7860</PASSWORD>\r
+         <USERNAME>786</USERNAME>\r
+      </urn:ZFM_LOGINEP_SEN>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>pouser@2</con:username><con:password>Tech@2022</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sap.com/xi/WebService/soap1.1"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

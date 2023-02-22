@@ -1,0 +1,55 @@
+
+//User function Template for Java
+
+class Solution{
+    static int numberOfSubsequences(String S, String W){
+        // code here
+        int i=0 , j=0;
+        int count=0;
+        char str[] = S.toCharArray();
+        while(j<S.length()){
+            if(W.charAt(i) == str[j]){
+               str[j] = '#';
+                i++;
+            }
+            if(i==W.length()){
+                count++;
+                i=0;
+                j=-1;
+            }
+            j++;
+        }
+        return count;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+ str = "abcdrtbwerrcokokokd" 
+ ch = "bcd"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
